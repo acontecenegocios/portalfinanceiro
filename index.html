@@ -47,6 +47,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
+            gap: 20px; /* Espaçamento entre os cards */
         }
         .card {
             background: #fff;
@@ -55,6 +56,15 @@
             border-radius: 5px;
             width: 30%;
             box-sizing: border-box;
+            text-align: center;
+            /* Ajustar para textos que ocupem o máximo possível */
+            min-height: 200px; 
+        }
+        .card h3 {
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 14px;
         }
         .contato {
             background-color: #007bff;
@@ -99,6 +109,13 @@
             border-radius: 50%;
             font-size: 24px;
             text-align: center;
+        }
+
+        /* Responsividade: ajustar os cards em telas menores */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%; /* Cards ficam em uma coluna */
+            }
         }
     </style>
 </head>
@@ -170,3 +187,4 @@
     </a>
 </body>
 </html>
+
