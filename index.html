@@ -1,12 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FotoSeg - Seguro para Equipamentos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Acontece Negócios - Notícias - Informativo e Guia Comercial</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,180 +11,340 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+
         header {
-            background-color: #fff; /* Cabeçalho branco */
-            color: #000; /* Texto em preto para contraste */
-            padding: 20px 0;
-        }
-        .logo {
-            width: 100px;
-        }
-        .hero {
-            background-color: #007bff;
-            color: #fff;
-            padding: 50px 0;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .servicos {
-            padding: 50px 0;
-        }
-        .cards {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px; /* Espaçamento entre os cards */
-        }
-        .card {
-            background: #fff;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 5px;
-            width: 30%;
-            box-sizing: border-box;
+            background-color: #cc0000;
+            color: white;
             text-align: center;
-            /* Ajustar para textos que ocupem o máximo possível */
-            min-height: 200px; 
-        }
-        .card h3 {
-            margin-bottom: 15px;
-        }
-        .card p {
-            font-size: 14px;
-        }
-        .contato {
-            background-color: #007bff;
-            color: #fff;
-            padding: 50px 0;
-        }
-        .formulario {
-            background: #fff;
             padding: 20px;
-            border-radius: 5px;
-            width: 30%; /* Largura ajustada para ficar proporcional aos cards */
-            margin: 20px auto;
-        }
-        .formulario input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .formulario button {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: #fff;
-            padding: 15px;
-            border-radius: 50%;
             font-size: 24px;
-            text-align: center;
+            font-weight: bold;
         }
 
-        /* Responsividade: ajustar os cards em telas menores */
+        nav {
+            background-color: #990000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff0000;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .news article {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .news article h2 {
+            color: #cc0000;
+        }
+
+        .news article img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .news article a {
+            color: #cc0000;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .news article a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            color: #cc0000;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 8px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: #cc0000;
+        }
+
+        footer {
+            background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade para telas pequenas (máximo de 768px) */
         @media (max-width: 768px) {
-            .card {
-                width: 100%; /* Cards ficam em uma coluna */
+            .main-content {
+                grid-template-columns: 1fr; /* Coloca todas as seções em uma coluna */
             }
-            .formulario {
-                width: 80%; /* Formulário mais largo em telas menores */
+
+            .news article img {
+                width: 100%; /* As imagens se ajustam ao tamanho da tela */
+                height: auto;
+            }
+
+            nav ul {
+                flex-direction: column; /* Alinha os itens do menu verticalmente */
+                align-items: center;
+            }
+
+            .sidebar {
+                margin-top: 20px; /* Espaço acima da sidebar em telas pequenas */
+            }
+
+            footer {
+                font-size: 12px; /* Reduz o tamanho da fonte do footer para telas menores */
+                padding: 15px; /* Ajusta o padding do footer */
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="logo.png" alt="FotoSeg Logo" class="logo">
-            <h1>FotoSeg - Seguro para Equipamentos</h1>
-        </div>
+        <h1>Acontece Negócios - Notícias - Informativo e Guia Comercial</h1>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Proteja seus equipamentos com o melhor seguro do mercado!</h2>
-            <p>Especialistas em seguro para câmeras, celulares e drones.</p>
-            <a href="#contato" class="cta-button">Fale Conosco</a>
-        </div>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="itu.html">Itu</a></li>
+            <li><a href="salto.html">Salto</a></li>
+            <li><a href="indaiatuba.html">Indaiatuba</a></li>
+            <li><a href="cabreuva.html">Cabreúva</a></li>
+            <li><a href="#">Guia Comercial</a></li>
+        </ul>
+    </nav>
 
-    <section class="servicos">
-        <div class="container">
-            <h2>Nossos Serviços</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Seguro para Câmeras</h3>
-                    <p>Proteção completa para seus equipamentos fotográficos.</p>
-                </div>
-                <div class="card">
-                    <h3>Seguro para Celulares</h3>
-                    <p>Seu celular protegido contra roubos e danos.</p>
-                </div>
-                <div class="card">
-                    <h3>Seguro para Drones</h3>
-                    <p>Tranquilidade para você pilotar sem preocupações.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="container">
+        <div class="main-content">
+            <section class="news">
+    <!-- Vagas de Emprego na Região -->
 
-    <section class="formulario">
-        <div class="container">
-            <h2>Cadastre-se para saber mais</h2>
-            <form>
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="tel" name="whatsapp" placeholder="Número do WhatsApp" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Itu</h2>
+    <p>Confira as vagas disponíveis no PAT de Itu. Clique no link para saber mais.</p>
+    <a href="https://itu.sp.gov.br/emprego/pat/" target="_blank">Leia mais</a>
+</article>
 
-    <section id="contato" class="contato">
-        <div class="container">
-            <h2>Entre em Contato</h2>
-            <p><i class="fa fa-phone"></i> (11) 99999-9999</p>
-            <p><i class="fa fa-envelope"></i> contato@fotoseg.com.br</p>
-            <p><i class="fa-brands fa-instagram"></i> @fotoseg</p>
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Salto</h2>
+    <p>Confira as vagas disponíveis no PAT de Salto. Clique no link para saber mais.</p>
+    <a href="https://salto.sp.gov.br/pat/" target="_blank">Leia mais</a>
+</article>
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Cabreúva</h2>
+    <p>Confira as vagas disponíveis no PAT de Cabreúva. Clique no link para saber mais.</p>
+    <a href="https://www.cabreuva.sp.gov.br/noticias+home/vagas+pat.aspx" target="_blank">Leia mais</a>
+</article>
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Indaiatuba</h2>
+    <p>Confira as vagas disponíveis no PAT de Indaiatuba. Clique no link para saber mais.</p>
+    <a href="https://www.indaiatuba.sp.gov.br/tecnologia-inovacao-e-desenvolvimento/pat/vagas-disponiveis/" target="_blank">Leia mais</a>
+</article>
+
+    <!-- Últimas Notícias -->
+
+    <article>
+        <h2><i class="fas fa-bullhorn"></i> Últimas Notícias: Fique por dentro dos principais acontecimentos do Brasil e do mundo.</h2>
+        <p>Não perca as últimas atualizações sobre eventos importantes, em tempo real. Clique para saber mais.</p>
+        <a href="https://agenciabrasil.ebc.com.br/ultimas" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Política -->
+    <article>
+        <h2><i class="fas fa-gavel"></i> Política: As principais discussões e decisões que estão moldando o futuro do Brasil.</h2>
+        <p>Saiba mais sobre o que está acontecendo no Congresso e como isso pode afetar as próximas eleições.</p>
+        <a href="https://agenciabrasil.ebc.com.br/politica" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Geral -->
+    <article>
+        <h2><i class="fas fa-newspaper"></i> Geral: Acontecimentos e eventos que estão influenciando a vida cotidiana no Brasil.</h2>
+        <p>Fique por dentro das notícias que impactam a sociedade brasileira em diversas áreas, como segurança, cultura e mais.</p>
+        <a href="https://agenciabrasil.ebc.com.br/geral" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Economia -->
+    <article>
+        <h2><i class="fas fa-chart-line"></i> Economia: O que está acontecendo no mercado e como isso afeta sua vida financeira.</h2>
+        <p>Entenda as mudanças econômicas que estão impactando os brasileiros e o que esperar para o futuro da economia.</p>
+        <a href="https://agenciabrasil.ebc.com.br/economia" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Educação -->
+    <article>
+        <h2><i class="fas fa-school"></i> Educação: As principais mudanças e desafios no setor educacional brasileiro.</h2>
+        <p>Descubra as novidades sobre o sistema educacional no Brasil e as iniciativas para melhorar o ensino no país.</p>
+        <a href="https://agenciabrasil.ebc.com.br/educacao" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Cultura -->
+    <article>
+        <h2><i class="fas fa-theater-masks"></i> Cultura: O que está acontecendo na cultura brasileira e como ela está se transformando.</h2>
+        <p>Explore os eventos culturais que estão moldando o cenário artístico no Brasil e as novidades no setor.</p>
+        <a href="https://agenciabrasil.ebc.com.br/cultura" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Esportes -->
+    <article>
+        <h2><i class="fas fa-futbol"></i> Esportes: As últimas novidades do mundo esportivo, com foco no Brasil e no cenário internacional.</h2>
+        <p>Acompanhe as atualizações sobre os maiores eventos esportivos e os atletas que estão se destacando.</p>
+        <a href="https://agenciabrasil.ebc.com.br/esportes" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Saúde -->
+    <article>
+        <h2><i class="fas fa-heartbeat"></i> Saúde: Os desafios e avanços no setor de saúde que afetam a população brasileira.</h2>
+        <p>Saiba mais sobre as questões de saúde pública, novas descobertas e o que está sendo feito para melhorar a qualidade de vida.</p>
+        <a href="https://agenciabrasil.ebc.com.br/saude" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Meio Ambiente -->
+    <article>
+        <h2><i class="fas fa-leaf"></i> Meio Ambiente: Notícias sobre o futuro do meio ambiente e como as mudanças impactam o Brasil.</h2>
+        <p>Entenda as questões ambientais mais urgentes e as ações que estão sendo tomadas para preservar o nosso planeta.</p>
+        <a href="https://agenciabrasil.ebc.com.br/meio-ambiente" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Internacional -->
+    <article>
+        <h2><i class="fas fa-globe-americas"></i> Internacional: Acompanhe os eventos internacionais e as relações entre o Brasil e outros países.</h2>
+        <p>Fique por dentro das notícias internacionais que têm repercussão no Brasil e o impacto da política mundial no país.</p>
+        <a href="https://agenciabrasil.ebc.com.br/internacional" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Justiça -->
+    <article>
+        <h2><i class="fas fa-balance-scale"></i> Justiça: O que está acontecendo no sistema judiciário brasileiro e como isso afeta os cidadãos.</h2>
+        <p>Acompanhe as principais decisões e processos jurídicos que estão marcando o cenário judicial no Brasil.</p>
+        <a href="https://agenciabrasil.ebc.com.br/justica" target="_blank">Leia mais</a>
+    </article>
+</section>
+
+
+
+            <aside class="sidebar">
+		<h3>Os melhores Negócios da Região</h3>
+                <ul>
+
+                <li><a href="academias.html"><i class="fas fa-dumbbell"></i> Academia</a></li>
+                <li><a href="acai.html"><i class="fas fa-ice-cream"></i> Açaí</a></li>
+                <li><a href="adegasetabacarias.html"><i class="fas fa-wine-glass-alt"></i> Adegas e Tabacaria</a></li>
+                <li><a href="alinhamentoebalanceamento.html"><i class="fas fa-car"></i> Alinhamento e Balanceamento</a></li>
+                <li><a href="apartamentonaplanta.html"><i class="fas fa-building"></i> Apartamentos na Planta</a></li>
+                <li><a href="autoeletrica.html"><i class="fas fa-bolt"></i> Auto Elétrica</a></li>
+                <li><a href="barbearia.html"><i class="fas fa-cut"></i> Barbearia</a></li>
+                <li><a href="bicicletaria.html"><i class="fas fa-bicycle"></i> Bicicletaria</a></li>
+                <li><a href="brechochic.html"><i class="fas fa-tshirt"></i> Brechó Chic</a></li>
+                <li><a href="cestasdepresentes.html"><i class="fas fa-gift"></i> Cestas de Presentes</a></li>
+                <li><a href="centroderecreacao.html"><i class="fas fa-home"></i> Centro de Recreação</a></li>
+                <li><a href="correspondentesbancarios.html"><i class="fas fa-university"></i> Corresp. Bancário</a></li>
+                <li><a href="desmanches.html"><i class="fas fa-tools"></i> Desmanches</a></li>
+                <li><a href="empilhadeira.html"><i class="fas fa-cogs"></i> Empilhadeiras</a></li>
+                <li><a href="emprestimos.html"><i class="fas fa-credit-card"></i> Empréstimos</a></li>
+                <li><a href="funilaria.html"><i class="fas fa-tools"></i> Funilaria</a></li>
+                <li><a href="esteticaautomotiva.html"><i class="fas fa-car-alt"></i> Estética Automotiva</a></li>
+                <li><a href="esteticaemassoterapia.html"><i class="fas fa-spa"></i> Estética e Massoterapia</a></li>
+                <li><a href="flores"><i class="fas fa-seedling"></i> Flores e Decoração</a></li>
+                <li><a href="loja-carros.html"><i class="fas fa-car"></i> Loja de Carros</a></li>
+                <li><a href="maquinasdelavar.html"><i class="fas fa-tshirt"></i> Máquinas de Lavar</a></li>
+                <li><a href="materialdeconstrucao.html"><i class="fas fa-hammer"></i> Material de Construção</a></li>
+                <li><a href="mecanica-carros.html"><i class="fas fa-cogs"></i> Mecânica de Carros</a></li>
+                <li><a href="mecanica-motos"><i class="fas fa-motorcycle"></i> Mecânica de Motos</a></li>
+                <li><a href="moveisplanejados.html"><i class="fas fa-couch"></i> Móveis Planejados</a></li>
+                <li><a href="oticas.html"><i class="fas fa-glasses"></i> Óticas</a></li>
+                <li><a href="pastelarias.html"><i class="fas fa-utensils"></i> Pastelarias</a></li>
+                <li><a href="pizzarias.html"><i class="fas fa-pizza-slice"></i> Pizzarias</a></li>
+                <li><a href="restaurantes.html"><i class="fas fa-concierge-bell"></i> Restaurantes</a></li>
+                <li><a href="seguros.html"><i class="fas fa-shield-alt"></i> Seguros</a></li>
+                <li><a href="tapecaria.html"><i class="fas fa-couch"></i> Tapeçaria</a></li>
+
+                <h3>Últimas Notícias</h3>
+                <ul>
+                    <li><a href="https://agenciabrasil.ebc.com.br/ultimas" target="_blank">Últimas Notícias - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/politica" target="_blank">Política - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/geral" target="_blank">Geral - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/economia" target="_blank">Economia - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/educacao" target="_blank">Educação - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/cultura" target="_blank">Cultura - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/esportes" target="_blank">Esportes - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/saude" target="_blank">Saúde - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/meio-ambiente" target="_blank">Meio Ambiente - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/internacional" target="_blank">Internacional - Agência Brasil</a></li>
+                    <li><a href="https://agenciabrasil.ebc.com.br/justica" target="_blank">Justiça - Agência Brasil</a></li>
+                </ul>
+            </aside>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 FotoSeg. Todos os direitos reservados. CNPJ: 00.000.000/0001-00</p>
-        </div>
+        <p>&copy; 2025 Acontece Negócios - Todos os direitos reservados.</p>
     </footer>
-
-    <a href="https://wa.me/5511999999999" class="whatsapp" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
 </body>
 </html>
