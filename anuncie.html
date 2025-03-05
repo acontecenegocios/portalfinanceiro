@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncie Conosco - Acontece Negócios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000; /* Cor preta para o texto */
+            text-align: center;
+        }
+        header {
+            background-color: #cc0000;
+            color: white;
+            padding: 30px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #990000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff0000;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #cc0000;
+        }
+        p {
+            font-size: 22px;
+            margin: 25px 0;
+        }
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 20px 25px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        .whatsapp-button i {
+            margin-right: 15px;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #cc0000;
+            color: white;
+            font-size: 20px;
+        }
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #cc0000;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+        .back-button:hover {
+            background-color: #aa0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Acontece Negócios - Anuncie Conosco
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="itu.html">Itu</a></li>
+            <li><a href="salto.html">Salto</a></li>
+            <li><a href="indaiatuba.html">Indaiatuba</a></li>
+            <li><a href="cabreuva.html">Cabreúva</a></li>
+            <li><a href="guia_comercial.html">Guia Comercial</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Seu negócio merece mais visibilidade!</h1>
+        <p>Alcance milhares de clientes e aumente suas vendas anunciando no Acontece Negócios. Aqui sua marca ganha destaque e atinge o público certo!</p>
+        <p>Não perca tempo! Entre em contato agora e descubra como podemos impulsionar seu negócio!</p>
+        <a href="https://wa.me/11991389974" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+        </a>
+    </div>
+    
+    <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+</body>
+</html>
