@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itu - História e Turismo</title>
+    <title>Portal Acontece Negócios - Itu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #fff5f5;
-            color: #333;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
+
         header {
             background-color: #cc0000;
             color: white;
@@ -21,12 +20,14 @@
             font-size: 24px;
             font-weight: bold;
         }
+
         nav {
             background-color: #990000;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav ul {
             list-style: none;
             padding: 10px;
@@ -34,9 +35,11 @@
             justify-content: center;
             margin: 0;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
@@ -45,61 +48,147 @@
             font-weight: bold;
             transition: background 0.3s;
         }
+
         nav ul li a:hover {
             background-color: #ff0000;
             border-radius: 5px;
         }
+
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: auto;
-            overflow: hidden;
             padding: 20px;
-            background: #ffffff;
         }
-        h1, h2, h3 {
-            color: #b30000;
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
         }
-        ul {
-            list-style-type: square;
+
+        .news article {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        .highlight {
-            font-weight: bold;
-            color: #d40000;
+
+        .news article h2 {
+            color: #cc0000;
         }
-        .back-btn {
-            background-color: #cc0000;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+
+        .news article img {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
             border-radius: 5px;
         }
-        .back-btn:hover {
+
+        .news article a {
+            color: #cc0000;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .news article a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            color: #cc0000;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 8px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            color: #cc0000;
+        }
+
+        footer {
             background-color: #990000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* Responsividade para telas pequenas (máximo de 768px) */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr; /* Coloca todas as seções em uma coluna */
+            }
+
+            .news article img {
+                width: 100%; /* As imagens se ajustam ao tamanho da tela */
+                height: auto;
+            }
+
+            nav ul {
+                flex-direction: column; /* Alinha os itens do menu verticalmente */
+                align-items: center;
+            }
+
+            .sidebar {
+                margin-top: 20px; /* Espaço acima da sidebar em telas pequenas */
+            }
+
+            footer {
+                font-size: 12px; /* Reduz o tamanho da fonte do footer para telas menores */
+                padding: 15px; /* Ajusta o padding do footer */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Acontece Negócios - Itu - História, Turismo e Cultura</h1>
+        <h1>Portal Acontece Negócios- Itu</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Início</a></li>
+            <li><a href="https://www.portal.acontecenegocios.com.br/">Início</a></li>
+            <li><a href="https://www.acontecenegocios.com.br/">Guia Comercial</a></li>
             <li><a href="itu.html">Itu</a></li>
             <li><a href="salto.html">Salto</a></li>
             <li><a href="indaiatuba.html">Indaiatuba</a></li>
             <li><a href="cabreuva.html">Cabreúva</a></li>
-            <li><a href="https://www.acontecenegocios.com.br/">Guia Comercial</a></li>
+           
         </ul>
     </nav>
-
+      
     <div class="container">
-        <h1>Itu: História, Turismo e Estatísticas da "Cidade dos Exageros"</h1>
+        <div class="main-content">
+            <section class="news">
+
+    <!-- Itu - O berço da República -->
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Conheça mais sobre Itu, uma cidade maravilhosa no interior de São Paulo</h2>
+    <p><h1>Itu: História, Turismo e Estatísticas da "Cidade dos Exageros"</h1>
 
         <h2>História de Itu</h2>
         <p>Itu é uma das cidades mais antigas do estado de São Paulo, fundada em 1610 pelo bandeirante Domingos Fernandes. Durante o período colonial, Itu tornou-se um importante centro comercial, especialmente no ciclo do açúcar e, posteriormente, no ciclo do café. Sua localização estratégica contribuiu para o seu desenvolvimento como um entreposto comercial.</p>
@@ -148,9 +237,173 @@
         </ul>
 
         <h2>Conclusão</h2>
-        <p>Itu é uma cidade que une tradição e modernidade. Seu patrimônio histórico, cultura vibrante e infraestrutura de qualidade fazem dela um destino imperdível no interior de São Paulo. Se você busca um lugar com belas paisagens, rica história e ótimas opções de lazer, Itu é o destino ideal.</p>
+        <p>Itu é uma cidade que une tradição e modernidade. Seu patrimônio histórico, cultura vibrante e infraestrutura de qualidade fazem dela um destino imperdível no interior de São Paulo. Se você busca um lugar com belas paisagens, rica história e ótimas opções de lazer, Itu é o destino ideal.</p></p>
+    <a href="https://itu.sp.gov.br/emprego/pat/" target="_blank">Leia mais</a>
+</article>
 
-        <a href="index.html" class="back-btn">Voltar para o Início</a>
+    <!-- Vagas de Emprego na Região -->
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Itu</h2>
+    <p>Confira as vagas disponíveis no PAT de Itu. Clique no link para saber mais.</p>
+    <a href="https://itu.sp.gov.br/emprego/pat/" target="_blank">Leia mais</a>
+</article>
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Salto</h2>
+    <p>Confira as vagas disponíveis no PAT de Salto. Clique no link para saber mais.</p>
+    <a href="https://salto.sp.gov.br/pat/" target="_blank">Leia mais</a>
+</article>
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Cabreúva</h2>
+    <p>Confira as vagas disponíveis no PAT de Cabreúva. Clique no link para saber mais.</p>
+    <a href="https://www.cabreuva.sp.gov.br/noticias+home/vagas+pat.aspx" target="_blank">Leia mais</a>
+</article>
+
+<article>
+    <h2><i class="fas fa-briefcase"></i> Vagas de Emprego no PAT de Indaiatuba</h2>
+    <p>Confira as vagas disponíveis no PAT de Indaiatuba. Clique no link para saber mais.</p>
+    <a href="https://www.indaiatuba.sp.gov.br/tecnologia-inovacao-e-desenvolvimento/pat/vagas-disponiveis/" target="_blank">Leia mais</a>
+</article>
+
+    <!-- Últimas Notícias -->
+
+    <article>
+        <h2><i class="fas fa-bullhorn"></i> Últimas Notícias: Fique por dentro dos principais acontecimentos do Brasil e do mundo.</h2>
+        <p>Não perca as últimas atualizações sobre eventos importantes, em tempo real. Clique para saber mais.</p>
+        <a href="https://agenciabrasil.ebc.com.br/ultimas" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Política -->
+    <article>
+        <h2><i class="fas fa-gavel"></i> Política: As principais discussões e decisões que estão moldando o futuro do Brasil.</h2>
+        <p>Saiba mais sobre o que está acontecendo no Congresso e como isso pode afetar as próximas eleições.</p>
+        <a href="https://agenciabrasil.ebc.com.br/politica" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Geral -->
+    <article>
+        <h2><i class="fas fa-newspaper"></i> Geral: Acontecimentos e eventos que estão influenciando a vida cotidiana no Brasil.</h2>
+        <p>Fique por dentro das notícias que impactam a sociedade brasileira em diversas áreas, como segurança, cultura e mais.</p>
+        <a href="https://agenciabrasil.ebc.com.br/geral" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Economia -->
+    <article>
+        <h2><i class="fas fa-chart-line"></i> Economia: O que está acontecendo no mercado e como isso afeta sua vida financeira.</h2>
+        <p>Entenda as mudanças econômicas que estão impactando os brasileiros e o que esperar para o futuro da economia.</p>
+        <a href="https://agenciabrasil.ebc.com.br/economia" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Educação -->
+    <article>
+        <h2><i class="fas fa-school"></i> Educação: As principais mudanças e desafios no setor educacional brasileiro.</h2>
+        <p>Descubra as novidades sobre o sistema educacional no Brasil e as iniciativas para melhorar o ensino no país.</p>
+        <a href="https://agenciabrasil.ebc.com.br/educacao" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Cultura -->
+    <article>
+        <h2><i class="fas fa-theater-masks"></i> Cultura: O que está acontecendo na cultura brasileira e como ela está se transformando.</h2>
+        <p>Explore os eventos culturais que estão moldando o cenário artístico no Brasil e as novidades no setor.</p>
+        <a href="https://agenciabrasil.ebc.com.br/cultura" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Esportes -->
+    <article>
+        <h2><i class="fas fa-futbol"></i> Esportes: As últimas novidades do mundo esportivo, com foco no Brasil e no cenário internacional.</h2>
+        <p>Acompanhe as atualizações sobre os maiores eventos esportivos e os atletas que estão se destacando.</p>
+        <a href="https://agenciabrasil.ebc.com.br/esportes" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Saúde -->
+    <article>
+        <h2><i class="fas fa-heartbeat"></i> Saúde: Os desafios e avanços no setor de saúde que afetam a população brasileira.</h2>
+        <p>Saiba mais sobre as questões de saúde pública, novas descobertas e o que está sendo feito para melhorar a qualidade de vida.</p>
+        <a href="https://agenciabrasil.ebc.com.br/saude" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Meio Ambiente -->
+    <article>
+        <h2><i class="fas fa-leaf"></i> Meio Ambiente: Notícias sobre o futuro do meio ambiente e como as mudanças impactam o Brasil.</h2>
+        <p>Entenda as questões ambientais mais urgentes e as ações que estão sendo tomadas para preservar o nosso planeta.</p>
+        <a href="https://agenciabrasil.ebc.com.br/meio-ambiente" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Internacional -->
+    <article>
+        <h2><i class="fas fa-globe-americas"></i> Internacional: Acompanhe os eventos internacionais e as relações entre o Brasil e outros países.</h2>
+        <p>Fique por dentro das notícias internacionais que têm repercussão no Brasil e o impacto da política mundial no país.</p>
+        <a href="https://agenciabrasil.ebc.com.br/internacional" target="_blank">Leia mais</a>
+    </article>
+
+    <!-- Justiça -->
+    <article>
+        <h2><i class="fas fa-balance-scale"></i> Justiça: O que está acontecendo no sistema judiciário brasileiro e como isso afeta os cidadãos.</h2>
+        <p>Acompanhe as principais decisões e processos jurídicos que estão marcando o cenário judicial no Brasil.</p>
+        <a href="https://agenciabrasil.ebc.com.br/justica" target="_blank">Leia mais</a>
+    </article>
+</section>
+
+
+
+            <aside class="sidebar">
+		<h3>Os melhores Negócios da Região</h3>
+                <ul>
+
+                <li><a href="academias.html"><i class="fas fa-dumbbell"></i> Academia</a></li>
+                <li><a href="acai.html"><i class="fas fa-ice-cream"></i> Açaí</a></li>
+                <li><a href="adegasetabacarias.html"><i class="fas fa-wine-glass-alt"></i> Adegas e Tabacaria</a></li>
+                <li><a href="alinhamentoebalanceamento.html"><i class="fas fa-car"></i> Alinhamento e Balanceamento</a></li>
+                <li><a href="apartamentonaplanta.html"><i class="fas fa-building"></i> Apartamentos na Planta</a></li>
+                <li><a href="autoeletrica.html"><i class="fas fa-bolt"></i> Auto Elétrica</a></li>
+                <li><a href="barbearia.html"><i class="fas fa-cut"></i> Barbearia</a></li>
+                <li><a href="bicicletaria.html"><i class="fas fa-bicycle"></i> Bicicletaria</a></li>
+                <li><a href="brechochic.html"><i class="fas fa-tshirt"></i> Brechó Chic</a></li>
+                <li><a href="cestasdepresentes.html"><i class="fas fa-gift"></i> Cestas de Presentes</a></li>
+                <li><a href="centroderecreacao.html"><i class="fas fa-home"></i> Centro de Recreação</a></li>
+                <li><a href="correspondentesbancarios.html"><i class="fas fa-university"></i> Corresp. Bancário</a></li>
+                <li><a href="desmanches.html"><i class="fas fa-tools"></i> Desmanches</a></li>
+                <li><a href="empilhadeira.html"><i class="fas fa-cogs"></i> Empilhadeiras</a></li>
+                <li><a href="emprestimos.html"><i class="fas fa-credit-card"></i> Empréstimos</a></li>
+                <li><a href="funilaria.html"><i class="fas fa-tools"></i> Funilaria</a></li>
+                <li><a href="esteticaautomotiva.html"><i class="fas fa-car-alt"></i> Estética Automotiva</a></li>
+                <li><a href="esteticaemassoterapia.html"><i class="fas fa-spa"></i> Estética e Massoterapia</a></li>
+                <li><a href="flores"><i class="fas fa-seedling"></i> Flores e Decoração</a></li>
+                <li><a href="loja-carros.html"><i class="fas fa-car"></i> Loja de Carros</a></li>
+                <li><a href="maquinasdelavar.html"><i class="fas fa-tshirt"></i> Máquinas de Lavar</a></li>
+                <li><a href="materialdeconstrucao.html"><i class="fas fa-hammer"></i> Material de Construção</a></li>
+                <li><a href="mecanica-carros.html"><i class="fas fa-cogs"></i> Mecânica de Carros</a></li>
+                <li><a href="mecanica-motos"><i class="fas fa-motorcycle"></i> Mecânica de Motos</a></li>
+                <li><a href="moveisplanejados.html"><i class="fas fa-couch"></i> Móveis Planejados</a></li>
+                <li><a href="oticas.html"><i class="fas fa-glasses"></i> Óticas</a></li>
+                <li><a href="pastelarias.html"><i class="fas fa-utensils"></i> Pastelarias</a></li>
+                <li><a href="pizzarias.html"><i class="fas fa-pizza-slice"></i> Pizzarias</a></li>
+                <li><a href="restaurantes.html"><i class="fas fa-concierge-bell"></i> Restaurantes</a></li>
+                <li><a href="seguros.html"><i class="fas fa-shield-alt"></i> Seguros</a></li>
+                <li><a href="tapecaria.html"><i class="fas fa-couch"></i> Tapeçaria</a></li>
+
+                <h3>Informativo</h3>
+                <ul>
+                    <li><a href="https://wise.com/br/currency-converter/dolar-hoje" target="_blank">Cotação do Dólar</a></li>
+                    <li><a href="https://itu.sp.gov.br/eventos/" target="_blank">Agenda Cultural - Prefeitura de Itu</a></li>
+                    <li><a href="https://salto.sp.gov.br/eventos-culturais-e-festas-comemorativas/" target="_blank">Agenda Cultural - Prefeitura de Salto</a></li>
+                    <li><a href="https://www.cabreuva.sp.gov.br/categoria/agenda+cultural+home.aspx" target="_blank">Agenda Cultural - Prefeitura de Cabreúva</a></li>
+                    <li><a href="https://www.indaiatuba.sp.gov.br/agenda/" target="_blank">Agenda Cultural - Prefeitura de Indaiatuba</a></li>
+                    <li><a href="https://itu.sp.gov.br/meio-ambiente/parque-geologico-do-varvito/"_blank">Parque do Varvito em Itu</a></li>
+                    <li><a href="https://itu.sp.gov.br/turismo/cidade-da-crianca/">Cidade das Crianças em Itu</a></li>
+                    <li><a href="https://itu.sp.gov.br/turismo/atrativos-exagero-itu/" target="_blank">Atrações do Exageros em Itu</a></li>
+                    <li><a href="https://www.indaiatuba.sp.gov.br/parque_ecologico_30_anos/" target="_blank">Parque Ecológico de Indaiatuba</a></li>
+                    <li><a href="https://cultura.indaiatuba.sp.gov.br/turismo/pagina/8/parque-do-mirim/" target="_blank">Parque Mirim em Indaiatuba</a></li>
+                    <li><a href="https://salto.sp.gov.br/turismo/atrativos-turisticos/parque-da-rocha-moutonnee/" target="_blank">Parque da Rocha Moutonnee em Salto</a></li>
+                </ul>
+            </aside>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Acontece Negócios - Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
