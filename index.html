@@ -17,6 +17,30 @@
 
 
     <title>Portal Acontece Negócios</title>
+
+ <style>
+      .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 25px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .whatsapp-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+    </style>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -193,9 +217,627 @@
         </ul>
     </nav>
 
+  <!-- ESTILO PARA FORMATAR O WIDGET RSS -->
+    <style>
+        #rss-feed ul {
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0;
+        }
+        #rss-feed li {
+            margin-bottom: 10px; /* Espaço entre os itens */
+        }
+        #rss-feed a {
+            text-decoration: none;
+            color: #007bff; /* Cor azul para os links */
+            font-weight: bold;
+        }
+        #rss-feed a:hover {
+            text-decoration: underline; /* Sublinhar ao passar o mouse */
+        }
+    </style>
+</head>
+
     <div class="container">
         <div class="main-content">
             <section class="news">
+
+ <!-- TÍTULO DA SEÇÃO DE NOTÍCIAS -->
+    <h1>Últimas Notícias</h1>
+
+    <!-- ÁREA ONDE AS NOTÍCIAS DO RSS SERÃO EXIBIDAS -->
+    <div id="rss-feed">Carregando...</div>
+
+    <!-- SCRIPT PARA BUSCAR AS NOTÍCIAS DO RSS -->
+    <script>
+        async function loadRSS() {
+            const url = "<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://agenciabrasil.ebc.com.br/feed/ultimasnoticias/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feed Últimas</title>
+    <link>https://agenciabrasil.ebc.com.br/feed/ultimasnoticias/feed.xml</link>
+    <description>A Agência Brasil é a agência de notícias da Empresa Brasil de Comunicação (EBC), que distribui gratuitamente informações de interesse público. As notícias podem ser reproduzidas desde que citada a fonte.</description>
+    <language>pt-br</language>
+     <atom:link href="https://agenciabrasil.ebc.com.br/feed/ultimasnoticias/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>Moraes envia à PGR defesas de denunciados por tentativa de golpe</title>
+    <link>https://agenciabrasil.ebc.com.br/justica/noticia/2025-03/moraes-envia-pgr-defesas-de-denunciados-por-tentativa-de-golpe</link>
+    <imagem-destaque>https://imagens.ebc.com.br/iq3Av1AHUV1MWvxg8y8QgzBD_t8=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/manifestacao1_mcamgo_abr_080120231818-5.jpg?itok=SndoS0Bk</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-03/moraes-envia-pgr-defesas-de-denunciados-por-tentativa-de-golpe&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;O ministro do Supremo Tribunal Federal (STF) Alexandre de Moraes enviou, neste sábado (8), para a Procuradoria-Geral da União (PGR) as manifestações de defesa apresentadas por denunciados no inquérito sobre a trama golpista.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633679&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633679&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O prazo de 15 dias para a &lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-03/stf-ja-recebeu-defesas-de-17-dos-34-denunciados-por-golpe-de-estado&quot; target=&quot;_blank&quot;&gt;entrega da defesa por escrito&lt;/a&gt; começou a contar no dia 19 de fevereiro, quando a &lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-02/pgr-denuncia-bolsonaro-e-mais-33-por-tentativa-de-golpe-de-estado&quot; target=&quot;_blank&quot;&gt;maioria dos acusados foi notificada sobre a denúncia&lt;/a&gt;, e venceu às 23h59 desta sexta-feira (7).&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-03/defesa-de-ex-ministro-nega-participacao-em-tentativa-de-golpe&quot;&gt;Defesa de ex-ministro nega participação em tentativa de golpe.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-03/ramagem-pede-ao-stf-rejeicao-de-denuncia-sobre-tentativa-de-golpe&quot;&gt;Ramagem pede ao STF rejeição de denúncia sobre tentativa de golpe.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2025-02/barroso-narrativa-de-quem-apoiou-tentativa-de-golpe-nao-prevalecera&quot;&gt;Barroso: narrativa de quem apoiou tentativa de golpe não prevalecerá.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;strong&gt;A PGR, por sua vez, terá cinco dias, a contar a partir da próxima segunda-feira (10), para se manifestar sobre os argumentos apresentados pelos advogados dos denunciados.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2&gt;Denunciados&lt;/h2&gt;
+
+&lt;p&gt;Um dos documentos enviados por Moraes à PGR traz a defesa de denunciados do núcleo que inclui o ex-presidente Jair Bolsonaro e ex-integrantes de sua gestão. São eles:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Alexandre Ramagem, ex-diretor-geral da Agência Brasileira de Inteligência (Abin);&lt;/li&gt;
+	&lt;li&gt;Almir Garnier Santos, ex-comandante da Marinha do Brasil;&lt;/li&gt;
+	&lt;li&gt;Anderson Torres, ex-ministro da Justiça e ex-secretário de Segurança Pública do Distrito Federal;&lt;/li&gt;
+	&lt;li&gt;Augusto Heleno, ex-ministro do Gabinete de Segurança Institucional da Presidência;&lt;/li&gt;
+	&lt;li&gt;Mauro Cid; ex-ajudante de ordens de Bolsonaro;&lt;/li&gt;
+	&lt;li&gt;Paulo Sérgio Nogueira, ex-ministro da Defesa;&lt;/li&gt;
+	&lt;li&gt;Walter Braga Netto, ex-ministro da Casa Civil.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Moraes também encaminhou à PGR as defesas de integrantes de outro núcleo, que inclui os seguintes denunciados:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Bernardo Romão Correa Netto;&lt;/li&gt;
+	&lt;li&gt;Cleverson Ney Magalhães;&lt;/li&gt;
+	&lt;li&gt;Estevam Cals Theophilo Gaspar der Oliveira;&lt;/li&gt;
+	&lt;li&gt;Fabrício Moreira de Bastos;&lt;/li&gt;
+	&lt;li&gt;Hélio Ferreira Lima;&lt;/li&gt;
+	&lt;li&gt;Márcio Nunes de Resende Júnior;&lt;/li&gt;
+	&lt;li&gt;Nilton Diniz Rodrigues;&lt;/li&gt;
+	&lt;li&gt;Rafael Martins de Oliveira;&lt;/li&gt;
+	&lt;li&gt;Rodrigo Bezerra de Azevedo;&lt;/li&gt;
+	&lt;li&gt;Ronald Ferreira de Araújo Júnior;&lt;/li&gt;
+	&lt;li&gt;Sérgio Ricardo Cavaliere de Medeiros; e &lt;/li&gt;
+	&lt;li&gt;Wladimir Matos Soares&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Julgamento&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Após a entrega das defesas, o julgamento será marcado pelo STF. &lt;/strong&gt;O processo será julgado pela Primeira Turma do Supremo. &lt;/p&gt;
+
+&lt;p&gt;O colegiado é composto por Moraes, relator da denúncia, e pelos ministros Flávio Dino, Cristiano Zanin, Cármen Lúcia e Luiz Fux.&lt;/p&gt;
+
+&lt;p&gt;Pelo regimento interno da Corte, cabe às duas turmas do tribunal julgar ações penais. Como o relator faz parte da Primeira Turma, a acusação será julgada pelo colegiado.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Se maioria dos ministros aceitar a denúncia, Bolsonaro e os outros denunciados viram réus e passam a responder a uma ação penal no STF.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Considerando os trâmites legais, o caso pode ser julgado ainda neste primeiro semestre de 2025.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 15:43:00 -0300</pubDate>
+ <dc:creator>Paula Laboissière – Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633679 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/justica">Justiça</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/pgr">PGR</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/stf">stf</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/tentativa-de-golpe">tentativa de golpe</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/jair-bolsonaro">Jair Bolsonaro</category>
+  </item>
+  <item>
+    <title>Desfile das Campeãs do carnaval carioca tem ação contra feminicídio</title>
+    <link>https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/desfile-das-campeas-do-carnaval-carioca-tem-acao-contra-feminicidio</link>
+    <imagem-destaque>https://imagens.ebc.com.br/it-0S59EaiCm41iK9Uk96C7Qn0k=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/02/07/1000007951.jpg?itok=9eZ5VSTx</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/desfile-das-campeas-do-carnaval-carioca-tem-acao-contra-feminicidio&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;Além das seis escolas de samba com a melhor pontuação, um bloco muito importante vai passar pela Marquês de Sapucaí no Desfile das Campeãs, neste sábado (8). É o bloco da mobilização nacional pelo Feminicídio Zero, que está aproveitando o carnaval carioca e o Dia Internacional da Mulher para conscientizar os foliões sobre a importância do combate à violência de gênero.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633678&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633678&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mais de 300 mulheres vão desfilar carregando uma faixa com a mensagem “Feminicídio Zero - Nenhuma violência contra a mulher deve ser tolerada”. Está prevista a participação da Ministra das Mulheres, Cida Gonçalves, e de outras ministras e parlamentares.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/seis-escolas-voltam-hoje-ao-sambodromo-do-rio-para-desfile-das-campeas&quot;&gt;Seis escolas voltam hoje ao Sambódromo do Rio para desfile das campeãs.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/sp-desfile-das-campeas-sera-neste-sabado-tv-brasil-transmite-ao-vivo&quot;&gt;SP: desfile das campeãs será neste sábado; TV Brasil transmite ao vivo.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-02/governo-federal-lanca-campanha-feminicidio-zero-na-sapucai&quot;&gt;Governo federal lança campanha Feminicídio Zero na Sapucaí.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;A campanha também afixou materiais informativos em diversos espaços do Sambódromo, como painéis, cubos de frisa e banheiros. Antes dos desfiles, agentes fizeram um trabalho de conscientização nas quadras das escolas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&quot;Carnaval é lugar de respeito, de felicidade, de amor, mas principalmente de não assédio, não violência, e não feminicídio&quot;, declarou a ministra Cida Gonçalves em um dos vídeos de divulgação da campanha.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A mobilização Feminicídio Zero é uma ação permanente do Ministério das Mulheres, lançada em agosto de 2024. Um dos principais objetivos é ampliar a divulgação da Central de Atendimento à Mulher - Ligue 180, que recebe denúncias e oferece informações sobre as leis e serviços de proteção às mulheres. O canal funciona 24 horas por dia, sete dias por semana e está disponível também no WhatsApp pelo número (61) 9610-0180.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 15:31:00 -0300</pubDate>
+ <dc:creator>Tâmara Freire - Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633678 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/direitos-humanos">Direitos Humanos</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/desfile-das-campeas">Desfile das Campeãs</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/campanha-feminicidio-zero">campanha Feminicídio Zero</category>
+  </item>
+  <item>
+    <title>De brabo a professor, Laíla volta à avenida em homenagem da Beija-Flor</title>
+    <link>https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/de-brabo-professor-laila-volta-avenida-em-homenagem-da-beija-flor</link>
+    <imagem-destaque>https://imagens.ebc.com.br/--cm8WKWvpWUw_CPOMEQZ5A06ws=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/06/whatsapp_image_2025-03-06_at_16.53.52.jpeg?itok=ODoA32sx</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/de-brabo-professor-laila-volta-avenida-em-homenagem-da-beija-flor&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;Neste sábado (9), quando a Beija-Flor entrar na Marquês de Sapucaí, no Desfile das Campeãs, vai comemorar o 15º título e, principalmente, homenagear, mais uma vez, uma figura que se destaca como uma das mais importantes na história da azul e branco de Nilópolis, na Baixada Fluminense.&lt;strong&gt; &lt;em&gt;Laíla de Todos os Santos, Laíla de Todos os Sambas&lt;/em&gt; é o enredo criado pelo carnavalesco João Vítor Araújo para mostrar a vida do diretor de carnaval e de harmonia.&lt;/strong&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633632&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633632&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2&gt;Chegada à Beija-Flor&lt;/h2&gt;
+
+&lt;p&gt;A ida de Laíla para o carnaval de 1976, da Beija-Flor, foi um pedido do carnavalesco Joãosinho Trinta. Os dois já faziam parceria no Salgueiro, onde conquistaram os títulos, nos dois anos anteriores. Logo na chegada, a dupla ganhou mais um título com o enredo: &lt;em&gt;Sonhar com rei dá leão&lt;/em&gt;, relacionado ao jogo do bicho, que homenageava o contraventor Natal da Portela, que tinha morrido em 1975.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/beija-flor-conquista-o-15o-titulo-do-carnaval-do-rio-de-janeiro&quot;&gt;Beija-flor conquista o 15º título do carnaval do Rio de Janeiro.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/beija-flor-vai-homenagear-laila-mestre-dos-carnavais&quot;&gt;Beija-Flor vai homenagear Laíla, mestre dos carnavais.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2024-02/no-rio-desfile-das-campeas-comeca-com-show-inedito&quot;&gt;No Rio, desfile das campeãs começa com show inédito.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Ao todo, foram três as passagens de Laíla pelos carnavais da nilopolitana. &lt;strong&gt;O primeiro período entre 1975 e 1980, o segundo de 1987 a 1992. O terceiro foi o maior, entre 1994 e 2018. Nessa fase, foram nove conquista pela Beija-Flor&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/radioagencia-nacional/cultura/audio/2025-03/beija-flor-conquista-15o-titulo-e-e-campea-do-carnaval-carioca&quot; target=&quot;_blank&quot;&gt;&amp;gt;&amp;gt;Beija-flor conquista 15º título e é campeã do carnaval carioca&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Alegoria polêmica&lt;br /&gt;
+ &lt;/h2&gt;
+
+&lt;div class=&quot;dnd-widget-wrapper context-cheio_8colunas type-image&quot;&gt;&lt;div class=&quot;dnd-atom-rendered&quot;&gt;&lt;!-- scald=416722:cheio_8colunas --&gt;
+            &lt;img src=&quot;/sites/default/files/thumbnails/image/loading_v2.gif&quot; data-echo=&quot;https://imagens.ebc.com.br/B9pcqsYK39Z11LoB4k2Qx3wp0_4=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/c40688d698791a6ec718391aa147b347_copiar.jpg?itok=NzM_rIVu&quot; alt=&quot;Rio de Janeiro (RJ) 03/03/2025 - Pouco mais de 30 anos desde que o “Cristo Mendigo” desfilou pela primeira vez na escola Beija-Flor, a escultura retornou ao Sambódromo da Marquês de Sapucaí em uma cena marcante da apresentação da escola de samba de Nilópolis (RJ). Foto: Alex Ferro/Riotur&quot; title=&quot;Alex Ferro/Riotur&quot;&gt;
+        &lt;noscript&gt;&lt;img src=&quot;https://imagens.ebc.com.br/B9pcqsYK39Z11LoB4k2Qx3wp0_4=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/c40688d698791a6ec718391aa147b347_copiar.jpg?itok=NzM_rIVu&quot; alt=&quot;Rio de Janeiro (RJ) 03/03/2025 - Pouco mais de 30 anos desde que o “Cristo Mendigo” desfilou pela primeira vez na escola Beija-Flor, a escultura retornou ao Sambódromo da Marquês de Sapucaí em uma cena marcante da apresentação da escola de samba de Nilópolis (RJ). Foto: Alex Ferro/Riotur&quot; title=&quot;Alex Ferro/Riotur&quot;&gt;&lt;/noscript&gt;
+    &lt;!-- END scald=416722 --&gt;&lt;/div&gt;&lt;div class=&quot;dnd-caption-wrapper&quot;&gt;
+&lt;h6 class=&quot;meta&quot;&gt; Pouco mais de 30 anos desde que o “Cristo Mendigo” desfilou pela primeira vez na escola Beija-Flor, a escultura retornou ao Sambódromo da Marquês de Sapucaí em uma cena marcante da apresentação da escola de samba de Nilópolis (RJ). Foto: Alex Ferro/Riotur - &lt;strong&gt;Alex Ferro/Riotur&lt;/strong&gt;&lt;!--END copyright=416722--&gt;&lt;/h6&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Também neste sábado o público vai ver um carro alegórico que faz referência a um dos enredos mais polêmicos da escola&lt;/strong&gt; que teve a dupla à frente do seu desenvolvimento e resultou em mais um campeonato. Em 1989, &lt;em&gt;Ratos e Urubus, Larguem minha fantasia&lt;/em&gt;, levou para a avenida um Cristo Mendigo coberto por plástico preto com a frase “Mesmo proibido, olhai por nós”, era uma resposta da escola a uma decisão da Justiça, após o questionamento da igreja católica contra a alegoria do Cristo. A solução da escola foi cobri-la. Até hoje não se sabe se a autoria da alegoria é de Joãosinho Trinta, carnavalesco da escola na época, ou de Laíla que era diretor de carnaval. Agora em 2025, o Cristo voltou à Sapucaí, mais uma vez coberto, mas a frase “Do Orum [céu], olhai por nós”, um clamor para que mesmo da espiritualidade Laíla protegesse a escola.&lt;/p&gt;
+
+&lt;h2&gt;História&lt;/h2&gt;
+
+&lt;p&gt;O menino &lt;strong&gt;Luiz Fernando Ribeiro do Carmo, nasceu no dia 27 de maio de 1943, em uma família pobre, no Morro do Salgueiro, na Tijuca, bairro da zona norte do Rio&lt;/strong&gt;. De formação autodidata, foi lá que deu os primeiros passos que o levaram para uma escola de samba: criou uma escola mirim na comunidade (Unidos da Ladeira) e, nessa caminhada, chegou ao Salgueiro, onde, na harmonia, iniciou a sua história no mundo das escolas de samba.&lt;/p&gt;
+
+&lt;p&gt;Conforme o Guia dos Julgadores produzido pela Liga Independente das Escolas de Samba do Rio de Janeiro (Liesa), o quesito harmonia “é o entrosamento entre o ritmo e o canto. É, ainda, o Resultado da forma como os componentes de uma Escola desfilam cantando o Samba Enredo, demonstrando e considerando se há um perfeito entrosamento, consciência, domínio, audição e interpretação deles, em relação ao canto e ritmo do Samba Enredo junto ao intérprete principal. O quesito ‘Harmonia’ avalia o resultado sonoro conjunto executado pelos componentes musicais do desfile: a integração do canto, com os instrumentos e com a bateria”.&lt;/p&gt;
+
+&lt;p&gt;A homenagem significou também uma espécie de retorno de Laíla à Beija-Flor. A União da Ilha foi a última escola que ele esteve à frente do carnaval. Isso ocorreu, em 2020, ano em que a agremiação da Ilha do Governador, na zona norte do Rio, caiu para a Série Ouro. A saída da escola de Nilópolis aconteceu após Laíla questionar o seu papel nas decisões da comissão de carnaval da Beija-Flor.&lt;/p&gt;
+
+&lt;h2&gt;Imprescindível&lt;/h2&gt;
+
+&lt;p&gt;Para o historiador e escritor, Luiz Antônio Simas, Laíla foi um personagem imprescindível para aquilo que atualmente se entende como desfile de escola de samba contemporâneo. Simas lembrou que além de ser cria do Salgueiro, ter passado pela Beija-Flor, onde fez trajetória marcante, Laíla também desempenhou papel importante na Unidos da Tijuca e na Grande Rio.&lt;/p&gt;
+
+&lt;p&gt;“Enfim, um personagem fundamental e o que se destaca a meu ver no Laila é o fato de ter sido completo. Laila era um sujeito completo com profundo conhecimento da musicalidade das escolas de samba, pouca gente sabe, mas era um intérprete muito interessante, gravou sambas do Salgueiro. Laíla tinha uma concepção do que seria uma harmonia de escola de samba, a junção entre o canto e a dança dos componentes que era muito sofisticada.”, disse à &lt;strong&gt;Agência Brasil&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Simas ressaltou ainda que Laíla tinha ideias muito interessantes sobre a formação de uma escola de samba na pista; “Onde colocar uma ala das baianas; o melhor lugar para colocar o casal de mestre-sala e porta-bandeira. Acertou muito, cometeu lá os seus equívocos também, o que é normal, é assim que se aprende, mas é uma figura imprescindível por este talento múltiplo”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O historiador destacou ainda olhar de Laíla para a totalidade da escola de samba durante o desfile. “Tem o carnavalesco, que é muito bom em aspectos visuais, o compositor que entende muito de samba enredo. O Laíla tinha uma visão mais completa sobre o que é uma escola de samba. Talvez tenha sido a figura que melhor compreendeu os desfiles integrando os aspectos visuais, os aspectos coreográficos e os aspectos sonoros”, destacou.&lt;/p&gt;
+
+&lt;p&gt;“Como um desfile de escola de samba é um conjunto de múltiplas performances artísticas, eu posso dizer que o Laíla era um sujeito que tinha trânsito por todas essas performances, portanto é uma das figuras imprescindíveis na história das escolas de samba do Rio de Janeiro”, concluiu.&lt;/p&gt;
+
+&lt;h2&gt;Pai&lt;br /&gt;
+ &lt;/h2&gt;
+
+&lt;div class=&quot;dnd-widget-wrapper context-cheio_8colunas type-image&quot;&gt;&lt;div class=&quot;dnd-atom-rendered&quot;&gt;&lt;!-- scald=416720:cheio_8colunas --&gt;
+            &lt;img src=&quot;/sites/default/files/thumbnails/image/loading_v2.gif&quot; data-echo=&quot;https://imagens.ebc.com.br/ZDXGIIcP2Zq6O2eIGjUlYPXB-h8=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/laila_com_a_familia.jpg?itok=d__DSCi_&quot; alt=&quot;Rio de Janeiro (RJ) 07/03/2025 - Carnavalesco Laíla (direita) com sua família. Foto: Luiz Cláudio da Silva Ribeiro/Arquivo pessoal&quot; title=&quot;Luiz Cláudio da Silva Ribeiro/Arquivo pessoal&quot;&gt;
+        &lt;noscript&gt;&lt;img src=&quot;https://imagens.ebc.com.br/ZDXGIIcP2Zq6O2eIGjUlYPXB-h8=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/laila_com_a_familia.jpg?itok=d__DSCi_&quot; alt=&quot;Rio de Janeiro (RJ) 07/03/2025 - Carnavalesco Laíla (direita) com sua família. Foto: Luiz Cláudio da Silva Ribeiro/Arquivo pessoal&quot; title=&quot;Luiz Cláudio da Silva Ribeiro/Arquivo pessoal&quot;&gt;&lt;/noscript&gt;
+    &lt;!-- END scald=416720 --&gt;&lt;/div&gt;&lt;div class=&quot;dnd-caption-wrapper&quot;&gt;
+&lt;h6 class=&quot;meta&quot;&gt; Carnavalesco Laíla (direita) com sua família. Foto: &lt;strong&gt;Luiz Cláudio da Silva Ribeiro/Arquivo pessoal&lt;/strong&gt;&lt;!--END copyright=416720--&gt;&lt;/h6&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Luiz Cláudio da Silva Ribeiro, filho de Laíla, faz distinção entre o pai e o personagem da cultura das escolas de samba. Disse que cresceu ao lado de Luiz Fernando Ribeiro do Carmo e, para ele, Laíla é uma personalidade que o mundo do carnaval foi adquirindo com o tempo.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Ambos são pessoas muito boas. Como pai sempre procurou me dar o melhor possível dentro das possibilidades. Desde a infância era uma pessoa que trabalhava muito. Nas suas correrias muitas vezes não tinha tempo para muita coisa, mas sempre procurando educar, ensinando a respeitar os mais velhos, a ser honesto e procurar se desenvolver na vida”, recordou.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“Nós somos oriundos do Morro do Salgueiro, família humilde, ele e minha mãe trabalhavam muito para dar o sustento à família e procurar dar condições de estudos para a gente. Ele sempre trabalhou muito em trabalho de carteira assinada e mais em escola de samba. A vida dele foi essa. Dedicação constante ao samba e, com isso, tentando educar a gente da melhor maneira possível”.&lt;/p&gt;
+
+&lt;p&gt;No desfile deste ano da Beija-Flor, Luiz Cláudio foi o mestre de cerimônias, pessoa responsável por conduzir a harmonia do casal de mestre-sala (Claudinho) e porta-bandeira (Selminha Sorriso).&lt;/p&gt;
+
+&lt;p&gt;Segundo ele, foi com o pai que aprendeu os caminhos para garantir um bom desempenho no quesito harmonia. “Meu envolvimento no carnaval, não foi cedo não, porque no início ele era meio contra a gente estar envolvido com o carnaval. Com o tempo, há 19 anos, comecei a entrar no barracão, onde comecei a ter uma paixão maior, fui fazendo estudos”, disse.&lt;/p&gt;
+
+&lt;p&gt;Para o filho de Laíla, a passagem do tempo foi boa para o tipo de função que exerce na escola de Nilópolis. Ele recorda que, antes, para garantir a harmonia da escola na avenida, era preciso fazer comunicação boca a boca. Então surgiram os rádios de transmissão e, hoje, há um sistema de comunicação direta com os diversos integrantes do setor de harmonia ao longo do percurso da agremiação.&lt;/p&gt;
+
+&lt;p&gt;“Quando começou a existir rádios, alguns não eram de boa frequência e você tinha que ter disposição e conhecimento para passar a informação no tempo certo. Com o tempo, foi assumindo mais a harmonia e, em 2015, passei a ser o diretor-chefe da comissão de harmonia, me tornando campeão do carnaval em 2015 e 2018, na mesma função”, lembrou.&lt;/p&gt;
+
+&lt;h2&gt;Cobrança&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;A cobrança que o pai havia uma explicação. “Ele tinha na cabeça que tinha que ganhar. Era a perfeição&lt;/strong&gt;. Me cobrava igual a outro componente da escola. Não tinha diferença de ser filho, mas era cobrado de um jeito educado, como ele cobrava informações das outras pessoas, não era gritado. Só gritava dentro dos ensaios que eram de 2 mil pessoas dentro da quadra, no qual tinha bateria, som. Ele ensinava através de cobrança. Não dava aula em quadro-negro não, a aula dele era na prática. Quem observava o que ele fazia ia se desenvolvendo com o tempo”, explicou.&lt;/p&gt;
+
+&lt;h2&gt;Social&lt;/h2&gt;
+
+&lt;p&gt;Para Luiz Cláudio, a fama de durão, que costuma ser associada a Laíla, não tinha a ver com o comportamento do pai. “Essa fama de durão dele, era só fama de uma pessoa que tinha como objetivo realizar grandes trabalhos, ser campeão do carnaval. No fundo, era uma pessoa que se preocupava com o social demais. Ele cuidava de cada componente da escola, procurando saber se tinha ou não problema familiar, sempre preocupado com as crianças. Essa reflexão, esse sentido que ele fazia no social, se refletiu agora no carnaval do 2025, no qual ele não estava presente fisicamente, mas estava espiritualmente. Os componentes da escola abraçaram de uma maneira tão grande, que toda hora falavam: ‘ele está aqui com a gente. Isso é para ele, é por ele&#039;, porque sabiam o que ele fez por eles, o que ele lutou por eles. A relação dele com a comunidade não é só de campeonato. É uma relação social”, afirmou.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Luiz Cláudio disse que a importância de Laíla não se restringe ao carnaval do Rio de Janeiro e à Beija-Flor&lt;/strong&gt;. “Ele é importante para o carnaval inteiro. Ele trabalhava para descobrir novos talentos. Ele dava oportunidades. Ele projetou pessoas. Trouxe Neguinho [da Beija-Flor], trouxe Selminha, revolucionou colocando Selminha e Claudinho [porta-bandeira e mestre-sala] à frente da escola, revolucionou no canto e muitas coisas mais fazendo junção de samba enredo. Em outras escolas de samba era chamado para dar opiniões de samba. Era produtor do disco e não via diferença nenhuma entre uma escola e outra, trabalhava em prol do carnaval e não em prol de só uma escola”, pontuou.&lt;/p&gt;
+
+&lt;p&gt;No dia do desfile, sabendo que o homenageado no enredo era seu pai, foi difícil equilibrar a emoção e realizar a sua função junto ao casal de mestre-sala e porta-bandeira. “Desfilar sabendo que o enredo era ele foi emoção pura. Emoção que você tem que saber. Primeiro que fiz uma função de conduzir Selminha e Claudinho e a harmonia do setor, tem que ter frieza, porque você tem o seu pai sendo homenageado e você tem um trabalho a realizar, mas dentro de mim a emoção era pura e vendo um grande trabalho sendo realizado em que a escola correspondeu plenamente, a sua comunidade respondeu plenamente. Não tem nem palavras específicas para dizer. A gente sentia que ele estava ali com a gente. Na verdade, ele conduziu esse desfile da Beija-Flor”, completou.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Quando entrei no desfile, entrei vendo o meu pai. Eu conheci Luiz Fernando Ribeiro do Carmo que se transformou em Laíla, um pai aguerrido que fez tudo que podia pela gente e aí tem o Laíla com quem eu trabalhei, que me cobrava, mas cobrava pelo bem e se tornou uma coisa só”, contou.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Agradecimento&lt;br /&gt;
+ &lt;/h2&gt;
+
+&lt;div class=&quot;dnd-widget-wrapper context-cheio_8colunas type-image&quot;&gt;&lt;div class=&quot;dnd-atom-rendered&quot;&gt;&lt;!-- scald=416177:cheio_8colunas --&gt;
+            &lt;img src=&quot;/sites/default/files/thumbnails/image/loading_v2.gif&quot; data-echo=&quot;https://imagens.ebc.com.br/oD1T4XTYBV8Q-crdk-ST-Vidf3U=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/04/toms5010.jpg?itok=2bqYD3t1&quot; alt=&quot;Rio de Janeiro (RJ), 03/03/2025 – Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: Tomaz Silva/Agência Brasil&quot; title=&quot;Tomaz Silva/Agência Brasil&quot;&gt;
+        &lt;noscript&gt;&lt;img src=&quot;https://imagens.ebc.com.br/oD1T4XTYBV8Q-crdk-ST-Vidf3U=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/04/toms5010.jpg?itok=2bqYD3t1&quot; alt=&quot;Rio de Janeiro (RJ), 03/03/2025 – Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: Tomaz Silva/Agência Brasil&quot; title=&quot;Tomaz Silva/Agência Brasil&quot;&gt;&lt;/noscript&gt;
+    &lt;!-- END scald=416177 --&gt;&lt;/div&gt;&lt;div class=&quot;dnd-caption-wrapper&quot;&gt;
+&lt;h6 class=&quot;meta&quot;&gt;Selminha Sorriso e Claudinho. Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: &lt;strong&gt;Tomaz Silva/Agência Brasil&lt;/strong&gt;&lt;!--END copyright=416177--&gt;&lt;/h6&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;A porta-bandeira Selminha Sorriso, disse que Laíla a levou para a Beija-Flor junto com Claudinho, seu mestre-sala&lt;/strong&gt;. Por isso, neste carnaval, se prepararam para “orgulhá-lo no plano espiritual e em tudo que o mestre nos ensinou”.&lt;/p&gt;
+
+&lt;p&gt;Selminha ainda lembra das orientações que recebeu de Laíla. Reclamações que ficaram na memória e que foram importantes para o seu desenvolvimento como porta-bandeira. “Também levei puxões de orelha, também levei broncas, mas os ensinamentos, o aprendizado que ele nos deixou, falo em meu nome e no de Claudinho, são imensuráveis”, salientou.&lt;/p&gt;
+
+&lt;p&gt;A porta-bandeira número um da Beija-Flor fala com muito carinho e respeito pelo trabalho de Laíla, durante o período em que ele esteve no comando do carnaval da escola. “Falo sempre que sou escola de mestre Laíla, essa escola não é imitando mestre Laíla, é simplesmente, sendo uma mulher mais forte, entendendo o tamanho da responsabilidade, o que é construir um desfile de escola de samba”, afirmou.&lt;/p&gt;
+
+&lt;p&gt;É assim que Selminha reconhece todo o trabalho do carnavalesco na construção de sua formação porta-bandeira. “A soma do tudo é sempre maior que das partes, trabalhar em equipes, ser forte diante de qualquer dificuldade, não esmorecer, acreditar nos sonhos, buscar força onde você nem sabe que tem. Isso é escola de mestre Laíla, meu sentimento é de gratidão, muita gratidão mesmo, porque se hoje eu estou neste espaço que ocupo, com certeza, muito tem do mestre Laíla nas nossas vidas”, disse.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Selminha reconheceu que Laíla não era uma pessoa fácil, mas, ponderou que também não chegava a ser uma pessoa difícil. “Era você entender que toda a postura dele, às vezes com certo excesso, na maioria das vezes, se fazia necessário. Era um homem que tinha um olhar muito crítico, ouvido apurado, coração gigante. A fala nem sempre vinha com mel. Agora, é como você quer entender, como quer se comportar”, concluiu.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O carnavalesco João Vítor Araújo, &lt;strong&gt;autor do enredo deste ano, disse que o título da Beija-Flor trouxe também o reconhecimento da importância de Laíla&lt;/strong&gt;, que no fim da década de 1960, trabalhava com a turma de carnavalescos, como Fernando Pamplona, Maria Augusta, Rosa Magalhães, Arlindo Rodrigues, Joãosinho Trinta, Viriato, mas não tinha visibilidade.&lt;/p&gt;
+
+&lt;p&gt;“Graças a Deus, graças ao Sagrado, a Beija-Flor de Nilópolis conseguiu o título tão sonhado, que há sete anos não vinha. O título foi para a Baixada Fluminense, a comunidade está muito feliz e a justiça foi feita. A justiça a esse artista, diretor, compositor, cantor, produtor, diretor de carnaval, diretor de harmonia, esse cara múltiplo, que era o Laíla. A Justiça foi feita, o sambista venceu, o homem preto nascido e criado no Morro do Salgueiro, sem formação acadêmica, que ainda assim, conhecia de tudo um pouco, na verdade, não, ele conhecia de tudo muito, porque senão, não seria o Laíla. Ele venceu. O morro venceu, o preto favelado venceu”, comemorou.&lt;/p&gt;
+
+&lt;div class=&quot;dnd-widget-wrapper context-cheio_8colunas type-image&quot;&gt;&lt;div class=&quot;dnd-atom-rendered&quot;&gt;&lt;!-- scald=416198:cheio_8colunas --&gt;
+            &lt;img src=&quot;/sites/default/files/thumbnails/image/loading_v2.gif&quot; data-echo=&quot;https://imagens.ebc.com.br/samjMmhtER_DSEsyjX_cVQvQBAE=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/04/toms5141.jpg?itok=6Y4B6ozz&quot; alt=&quot;Rio de Janeiro (RJ), 03/03/2025 – Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: Tomaz Silva/Agência Brasil&quot; title=&quot;Tomaz Silva/Agência Brasil&quot;&gt;
+        &lt;noscript&gt;&lt;img src=&quot;https://imagens.ebc.com.br/samjMmhtER_DSEsyjX_cVQvQBAE=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/04/toms5141.jpg?itok=6Y4B6ozz&quot; alt=&quot;Rio de Janeiro (RJ), 03/03/2025 – Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: Tomaz Silva/Agência Brasil&quot; title=&quot;Tomaz Silva/Agência Brasil&quot;&gt;&lt;/noscript&gt;
+    &lt;!-- END scald=416198 --&gt;&lt;/div&gt;&lt;div class=&quot;dnd-caption-wrapper&quot;&gt;
+&lt;h6 class=&quot;meta&quot;&gt;Beija-Flor de Nilópolis desfila no segundo dia de carnaval do grupo Especial na Marquês de Sapucaí, na região central do Rio de Janeiro. Foto: &lt;strong&gt;Tomaz Silva/Agência Brasil&lt;/strong&gt;&lt;!--END copyright=416198--&gt;&lt;/h6&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Para João Vitor, essa é a melhor resposta que a Beija-Flor de Nilópolis podia dar “para a sociedade racista, preconceituosa, para aqueles que duvidaram que o Laíla daria enredo&lt;/strong&gt;, para aqueles que duvidaram que ele não teria história para ser contada e desenvolvida. A resposta está aí com esse título, a resposta está aí com enredo nota 10 e a resposta está aí, porque é a valorização de uma pessoa que viveu e morreu trabalhando, fazendo carnaval, e mais uma vítima da covid 19, em uma época em que a vacina era negligenciada aqui no Brasil”, afirmou.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;O carnavalesco disse que o desfile teve tanta identidade com o homenageado que foi possível senti-lo presente na avenida&lt;/strong&gt;. “O espírito do Laíla, tenho certeza, que ele se fez presente na avenida, eu senti, a comunidade sentiu, os componentes sentiram, por isso, a escola veio com aquela garra, por isso que a escola emocionou. Eu digo, que daqui há dez anos, 20 anos, o público há de se lembrar desse desfile histórico da Beija-Flor de Nilópolis. É muito bonito ver Laíla, o sambista, o preto favelado vencendo na Marquês de Sapucaí e que sirva de exemplo e lição, que valorizar o que é nosso, valorizar aquele que faz pelo nosso carnaval é maravilhoso, é gratificante. É a valorização do nosso chão e das nossas raízes”, concluiu.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 15:22:00 -0300</pubDate>
+ <dc:creator>Cristina Indio do Brasil - Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633632 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/cultura">Cultura</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/beija-flor-de-nilopolis">Beija-Flor de Nilópolis</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/laila">Laíla</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/desfile-das-campeas">Desfile das Campeãs</category>
+  </item>
+  <item>
+    <title>Escolas de samba do Rio tentam reverter penalidades </title>
+    <link>https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/escolas-de-samba-do-rio-tentam-reverter-penalidades</link>
+    <imagem-destaque>https://imagens.ebc.com.br/2FK5RMz7Ci8sCqg7czST4gRBtc4=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/05/toms6965.jpg?itok=7Lxmso8T</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/escolas-de-samba-do-rio-tentam-reverter-penalidades&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;Três escolas do carnaval do Rio de Janeiro apresentaram recursos à Liga das Escolas de Samba do Grupo Especial - Liesa por causa de notas recebidas na apuração:&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633673&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633673&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;. &lt;strong&gt;Acadêmicos do Grande Rio, segunda colocada&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-03/grupo-especial-4-escolas-sao-multadas-no-rio-por-desrespeito-regras&quot;&gt;Grupo Especial: 4 escolas são multadas no Rio por desrespeito a regras.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/rosas-de-ouro-e-campea-do-carnaval-das-escolas-de-samba-de-sao-paulo&quot;&gt;Rosas de Ouro é campeã do carnaval das escolas de samba de São Paulo.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/sp-desfile-das-campeas-sera-neste-sabado-tv-brasil-transmite-ao-vivo&quot;&gt;SP: desfile das campeãs será neste sábado; TV Brasil transmite ao vivo.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;. &lt;strong&gt;Unidos de Padre Miguel, rebaixada para a Série Ouro&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;.&lt;strong&gt; Unidos da Tijuca, que ficou em nono lugar, e recebeu uma multa de R$ 80 mil&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A Liesa informou, em nota, que seu departamento jurídico “já tomou ciência” dos recursos “e irá analisá-los, seguindo o regulamento do carnaval”. A Liga disse também que não pode detalhar o conteúdo dos recursos, nem estimar o tempo de apreciação.&lt;/p&gt;
+
+&lt;h2&gt;Justificativas&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;A Unidos da Tijuca não busca melhorar sua classificação, mas se livrar da multa pecuniária aplicada porque a escola teria excedido o tempo reservado para retirar suas alegorias da avenida&lt;/strong&gt;. &quot;A agremiação não deixou alegorias no local e consequentemente não prejudicou a saída da Beija-Flor, segunda escola a desfilar na mesma noite&quot;, declarou por meio de sua assessoria.&lt;/p&gt;
+
+&lt;p&gt;Por outro lado, a &lt;strong&gt;Grande Rio, que deixou de ser campeã por apenas um décimo, tenta dividir o campeonato com a Beija-Flor,&lt;/strong&gt; questionando a pontuação recebida no quesito Bateria. Em todos os quesitos, a menor nota atribuída à escola é descontada, mas como a Grande Rio recebeu duas notas 9,9, uma delas foi contada, o que tirou a escola da primeira colocação.&lt;/p&gt;
+
+&lt;p&gt;O jurado Ary Jaime Cohen penalizou a Grande Rio porque &quot;a resposta das caixas sugeriu uma imprecisão com efeito de flam&quot;, termo que indica falta de sincronia entre os instrumentos. Já a jurada Geiza Carvalho assinalou que &quot;não houve projeção sonora&quot; dos curimbós utilizados pela bateria.&lt;/p&gt;
+
+&lt;p&gt;A &lt;strong&gt;Unidos de Padre Miguel, que recebeu a pior pontuação e, portanto, foi rebaixada, declarou que encontrou inconsistências graves nas justificativas dadas pelos jurados &lt;/strong&gt;&quot;incluindo penalizações em quesitos específicos devido a uma falha técnica no caminhão de som – um problema alheio à responsabilidade da Unidos de Padre Miguel e que não deveria ter resultado em perda de pontos.&quot;&lt;/p&gt;
+
+&lt;h2&gt;Iorubá&lt;/h2&gt;
+
+&lt;p&gt;Uma das penalidades aplicadas à Unidos de Padre Miguel deu origem a um a movimento de protesto nas redes sociais. A jurada Ana Paula Fernandes, que avaliou o quesito samba-enredo, atribuiu nota 9,7 à agremiação e retirou 1 décimo por considerar que a letra tem &quot;trechos de difícil entendimento devido ao excesso de termos em iorubá&quot;, língua de origem africana, e que exerce grande influência no idioma falado no Brasil. &lt;/p&gt;
+
+&lt;p&gt;Este ano, a Unidos de Padre Miguel desfilou com o enredo &quot;&lt;em&gt;Egbé Iya Nassô&lt;/em&gt;&quot;, que falou sobre a trajetória da princesa africana Iyá Nassô, uma das principais semeadoras do culto aos orixás no Brasil. O enredo também homenageou os 200 anos da Casa Branca do Engenho Velho, considerado o mais antigo templo afro-brasileiro ainda em funcionamento.&lt;/p&gt;
+
+&lt;p&gt;O professor de história, escritor e compositor Luiz Antônio Simas é um dos especialistas que considerou o argumento inadequado.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Em um &lt;em&gt;post&lt;/em&gt; compartilhado pela escola, declarou: &quot;Um enredo inspirado na cultura do candomblé não pode ter expressões ligadas ao candomblé? Elas são constituintes das falas brasileiras e o iorubá é, inclusive, patrimônio imaterial do Rio de Janeiro desde 2018&quot;.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 15:05:00 -0300</pubDate>
+ <dc:creator>Tâmara Freire - Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633673 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/cultura">Cultura</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/escolas-de-samba">escolas de samba</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/rio-de-janeiro">Rio de Janeiro</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/recursos">recursos</category>
+  </item>
+  <item>
+    <title>Seis escolas voltam hoje ao Sambódromo do Rio para desfile das campeãs</title>
+    <link>https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/seis-escolas-voltam-hoje-ao-sambodromo-do-rio-para-desfile-das-campeas</link>
+    <imagem-destaque>https://imagens.ebc.com.br/EEr5vSsajKk_2pkqsA1o3Y82CNw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/04/toms5191.jpg?itok=9DJVSqxk</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/seis-escolas-voltam-hoje-ao-sambodromo-do-rio-para-desfile-das-campeas&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;As seis escolas com melhor classificação do Grupo Especial do carnaval carioca retornam ao Sambódromo na noite deste sábado (8), para o tradicional desfile das campeãs. &lt;strong&gt;A festa começa às 22h com o desfile da Estação Primeira de Mangueira, que terminou o campeonato na sexta colocação.&lt;/strong&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633583&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633583&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A verde e rosa da zona norte, segunda maior vencedora da história do carnaval carioca, com 20 títulos, apresenta o enredo &lt;em&gt;À Flor da Terra - No Rio da Negritude Entre Dores e Paixões&lt;/em&gt;. A escola voltará à Passarela do Samba para &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-02/mangueira-enredo-vai-mostrar-permanencia-da-cultura-bantu-no-rio&quot; target=&quot;_blank&quot;&gt;apresentar a cultura bantu&lt;/a&gt;, comum a diversos povos da África e trazida com os escravos para o Brasil.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/beija-flor-conquista-o-15o-titulo-do-carnaval-do-rio-de-janeiro&quot;&gt;Beija-flor conquista o 15º título do carnaval do Rio de Janeiro.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;strong&gt;Quinta colocada no carnaval deste ano e maior vencedora da história, com 22 títulos, a Portela entra no Sambódromo em seguida, com o enredo &lt;em&gt;Cantar Será Buscar o Caminho que Vai dar no Sol&lt;/em&gt;&lt;/strong&gt;, que homenageou o cantor e compositor mineiro Milton Nascimento. Milton inclusive desfilou em um dos carros alegóricos, na terça-feira (4).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A terceira escola a entrar no Sambódromo será a campeã do carnaval de 2024 que, neste ano, ficou na quarta posição, a Unidos de Viradouro&lt;/strong&gt;. O desfile, que começa já na madrugada de domingo (9), &lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/viradouro-aposta-na-historia-de-malunguinho-para-tentar-bicampeonato&quot; target=&quot;_blank&quot;&gt;homenageia o líder quilombola João Batista&lt;/a&gt;, conhecido como Malunguinho, com o enredo &lt;em&gt;Malunguinho: o Mensageiro de Três Mundos&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Imperatriz Leopoldinense, terceira colocada neste ano, será a quarta escola a entrar na avenida&lt;/strong&gt;, com o enredo &lt;em&gt;Ómi Tútu ao Olúfon - Água Fresca para o Senhor de Ifón&lt;/em&gt;, &lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/imperatriz-leopoldinense-mostrara-viagem-de-oxala-ao-reino-de-xango&quot; target=&quot;_blank&quot;&gt;sobre a viagem de Oxalá ao reino de Xangô&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vice-campeã, a Acadêmicos do Grande Rio deve entrar na avenida entre as 2h20 e as 3h de domingo&lt;/strong&gt;. Após ter perdido o título por apenas um décimo, a escola de Duque de Caxias volta à Passarela do Samba com o enredo Pororocas Parawaras: as Águas dos Meus Encantos nas Contas dos Curimbós, &lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/grande-rio-quer-ganhar-publico-do-sambodromo-com-encantarias-do-para&quot; target=&quot;_blank&quot;&gt;sobre as encantarias do Pará&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fechando a noite de festa, a campeã Beija-Flor de Nilópolis, que &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/beija-flor-conquista-o-15o-titulo-do-carnaval-do-rio-de-janeiro&quot; target=&quot;_blank&quot;&gt;conquistou neste ano seu 15º título&lt;/a&gt;, entra na avenida, entre as 3h25 e as 4h15&lt;/strong&gt;. O enredo Laíla de todos os Santos, Laíla de todos os Sambas, &lt;a href=&quot;https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/beija-flor-vai-homenagear-laila-mestre-dos-carnavais&quot; target=&quot;_blank&quot;&gt;homenageia Luiz Fernando do Carmo&lt;/a&gt;, o Laíla, músico, compositor e carnavalesco que participou de diversos títulos da escola de Nilópolis.&lt;/p&gt;
+
+&lt;h2&gt;Regras&lt;/h2&gt;
+
+&lt;p&gt;Apesar de não ser um desfile competitivo, uma vez que o resultado do carnaval 2025 já foi divulgado, existem algumas regras que as escolas precisam cumprir, sob pena de pagamento de multas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Entre as exigências para o desfile das campeãs estão os compromissos de se apresentar entre 60 e 70 minutos, com pelo menos 150 ritmistas na bateria e 45 pessoas na Ala das Baianas, sendo todos completamente fantasiados. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Será permitida a ausência de até uma alegoria e a maior parte dos componentes da escola precisam estar presentes.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 14:53:00 -0300</pubDate>
+ <dc:creator>Vitor Abdala – Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633583 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/cultura">Cultura</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/beija-flor-1">Beija-Flor</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/desfile-das-campeas">Desfile das Campeãs</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/rio-de-janeiro">Rio de Janeiro</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/sambodromo">sambódromo</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/liesa">Liesa</category>
+  </item>
+  <item>
+    <title>Anvisa aprova primeira insulina semanal para tratar diabetes 1 e 2</title>
+    <link>https://agenciabrasil.ebc.com.br/saude/noticia/2025-03/anvisa-aprova-primeira-insulina-semanal-para-tratar-diabetes-1-e-2</link>
+    <imagem-destaque>https://imagens.ebc.com.br/2ENNMW3NAtrNiTneptZNUgEcnyA=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/08/h2.jpg?itok=pmoU8QmC</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/saude/noticia/2025-03/anvisa-aprova-primeira-insulina-semanal-para-tratar-diabetes-1-e-2&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou a primeira insulina semanal do mundo para o tratamento de pacientes adultos com diabetes tipo 1 e 2 no Brasil. &lt;strong&gt;Trata-se da medicação Awiqli, produzida pela farmacêutica Novo Nordisk. &lt;/strong&gt;Apesar da aprovação, não há data prevista para lançamento no país.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633676&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633676&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Em nota, o fabricante informou que a aprovação foi baseada em resultados do programa de ensaios clínicos Onwards, que demonstrou a eficácia do remédio no controle dos níveis de glicose em pacientes com diabetes tipo 1, &lt;strong&gt;alcançando controle glicêmico comparável ao da insulina basal de aplicação diária.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/politica/noticia/2024-12/senado-equipara-diabetes-tipo-1-deficiencia&quot;&gt;Senado equipara diabetes tipo 1 a deficiência.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/saude/noticia/2024-08/brasil-inaugura-fabrica-de-medicamentos-para-diabetes-e-obesidade&quot;&gt;Brasil inaugura fábrica de medicamentos para diabetes e obesidade.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;“Pacientes que utilizaram icodeca mantiveram níveis adequados de glicemia ao longo da semana com uma única injeção.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ainda de acordo com os estudos, &lt;strong&gt;a insulina icodeca também demonstrou segurança e controle glicêmico eficaz, comparável ao das insulinas basais diárias em pacientes com diabetes tipo 2.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;“A insulina icodeca permitiu um controle estável da glicemia ao longo da semana com uma única injeção semanal, sendo eficaz em pacientes com diferentes perfis, incluindo aqueles com disfunção renal. Em ambos os casos, a segurança foi um fator determinante e Awiqli não demonstrou aumento significativo de eventos adversos graves, incluindo hipoglicemia.”&lt;/p&gt;
+
+&lt;h2&gt;Entenda&lt;/h2&gt;
+
+&lt;p&gt;Segundo a Novo Nordisk, a insulina semanal icodeca já foi aprovada para adultos com diabetes tipo 1 e 2 pela Agência Europeia de Medicamentos (EMA, na sigla em inglês) e em países como Austrália, Suíça, Alemanha, Japão e Canadá.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Na China, a medicação foi aprovada para o tratamento de diabetes tipo 2 em adultos. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Os pedidos também já foram submetidos ao FDA [Food and Drugs Adminstration, agência reguladora norte-americana] para avaliação”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“Todos os medicamentos da Novo Nordisk devem ser vendidos sob prescrição e o tratamento deve sempre ser indicado e acompanhado por um médico habilitado. &lt;strong&gt;Não há data prevista de lançamento do produto no Brasil”&lt;/strong&gt;, concluiu a farmacêutica no comunicado.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 14:45:00 -0300</pubDate>
+ <dc:creator>Paula Laboissière – Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633676 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/saude">Saúde</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/diabetes-0">Diabetes</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/awiqli">Awiqli</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/anvisa">Anvisa</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/medicamento">medicamento</category>
+  </item>
+  <item>
+    <title>Lula indica Verônica Abdalla para o Superior Tribunal Militar</title>
+    <link>https://agenciabrasil.ebc.com.br/politica/noticia/2025-03/lula-indica-veronica-abdalla-para-o-superior-tribunal-militar</link>
+    <imagem-destaque>https://imagens.ebc.com.br/rkmMjPTyo1jbGoiMYLhTQ57jX8A=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/08/54373253605_0211afc3bb_o.jpg?itok=WRI3qcNi</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/politica/noticia/2025-03/lula-indica-veronica-abdalla-para-o-superior-tribunal-militar&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;O presidente Luiz Inácio Lula da Silva indicou neste sábado (8) a advogada Verônica Abdalla Sterman para o Superior Tribunal Militar (STM). A indicação segue agora para apreciação do Senado Federal.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633674&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633674&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Em nota, o Palácio do Planalto informou que, &lt;strong&gt;se for aceita pelo Parlamento, Verônica será a segunda mulher a integrar a Corte, ao lado de Maria Elizabeth Rocha, também indicada por Lula em 2007&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/justica/noticia/2024-12/stm-sera-presidido-pela-primeira-vez-por-uma-mulher&quot;&gt;STM será presidido pela primeira vez por uma mulher.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt; “Tenho certeza de que você e Maria Elizabeth vão mudar a história do STM para melhor. O STM tem a compreensão do que é crime militar e do que é crime comum. Eu acho que vai ser bom para a sociedade brasileira, vai ser bom para o STM e vai ser bom para as mulheres”, disse Lula, em vídeo postado nas redes sociais.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“A cada dia que passa, a gente vai mostrar que as mulheres têm que estar onde elas quiserem, como elas quiserem. Porque elas não têm que se submeter a ninguém”, completou o presidente.&lt;/p&gt;
+
+&lt;p&gt;No vídeo, Verônica agradece a indicação e cita a simbologia de a indicação ser formalizada no Dia Internacional da Mulher. “Agradeço e fico muito honrada por ter sido indicada nessa data tão importante para as mulheres, dia 8 de março. E espero fazer jus ao cargo. Vou honrar essa indicação”.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 14:35:00 -0300</pubDate>
+ <dc:creator>Paula Laboissière - Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633674 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/politica">Política</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/ministra">ministra</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/superior-tribunal-militar">Superior Tribunal Militar</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/stm">STM</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/veronica-abdalla">Verônica Abdalla</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/lula">Lula</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/indicacao-0">Indicação</category>
+  </item>
+  <item>
+    <title>SP: desfile das campeãs será neste sábado; TV Brasil transmite ao vivo</title>
+    <link>https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/sp-desfile-das-campeas-sera-neste-sabado-tv-brasil-transmite-ao-vivo</link>
+    <imagem-destaque>https://imagens.ebc.com.br/ImVkigOwuqA-UQc0aO9L5KJ-OQg=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/01/roas_ouro_08.jpg?itok=-CzAVZOm</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/sp-desfile-das-campeas-sera-neste-sabado-tv-brasil-transmite-ao-vivo&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;O Desfile das Escolas de Samba Campeãs do Carnaval de São Paulo ocorre na noite deste sábado (8), no Sambódromo do Anhembi, zona norte da capital paulista. &lt;strong&gt;A TV Brasil faz a exibição ao vivo, a partir das 21h.&lt;/strong&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633672&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633672&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;O evento reúne as cinco agremiações classificadas nas primeiras posições do Grupo Especial de São Paulo.&lt;/strong&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/carnaval-de-sp-tv-brasil-exibe-desfile-das-campeas-com-exclusividade&quot;&gt;Carnaval de SP: TV Brasil exibe desfile das Campeãs com exclusividade.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Além da escola de samba vencedora Rosas de Ouro, retornam para celebrar na avenida a Acadêmicos do Tatuapé, Gaviões da Fiel, Mocidade Alegre e Camisa Verde e Branco, que terminaram a apuração entre o segundo e o quinto lugar, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;A programação inclui ainda a campeã e a vice do Grupo de Acesso 1 – Tom Maior e Mocidade Unida da Mooca (MUM) –; &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/enredo-sobre-exu-mulher-da-titulo-escola-do-grupo-de-acesso-de-sp&quot; target=&quot;_blank&quot;&gt;além da ganhadora – Pérola Negra&lt;/a&gt; – e da segunda colocada – Camisa 12 – do Grupo de Acesso 2.&lt;/p&gt;
+
+&lt;h2&gt;Grupo Especial&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;A escola de samba &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/rosas-de-ouro-e-campea-do-carnaval-das-escolas-de-samba-de-sao-paulo&quot; target=&quot;_blank&quot;&gt;Rosas de Ouro conquistou o oitavo título&lt;/a&gt; do Grupo Especial de São Paulo em 2025, depois da última vitória há 15 anos, em 2010. &lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Com o enredo &lt;em&gt;Rosas de Ouro em uma Grande Jogada&lt;/em&gt;, a agremiação trouxe a história dos jogos e fez um painel de como eles influenciaram a humanidade.&lt;/p&gt;
+
+&lt;p&gt;A acirrada disputa foi decidida apenas na última nota, nos critérios de desempate. &lt;strong&gt;A diferença entre as duas primeiras colocadas e as outras três agremiações que retornam para o Desfile das Campeãs foi de apenas um décimo.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ainda no Grupo Especial, as escolas de samba Acadêmicos do Tucuruvi e Mancha Verde foram as últimas classificadas, em 13º e 14º. Elas descem para o Grupo de Acesso 1 em 2026.&lt;/p&gt;
+
+&lt;h2&gt;Grupo de Acesso 1&lt;/h2&gt;
+
+&lt;p&gt;As agremiações Tom Maior e Mocidade Unida da Mooca (MUM) ficaram, respectivamente, em primeiro e segundo lugar do Grupo de Acesso 1 e desfilam no Grupo Especial no próximo ano.&lt;/p&gt;
+
+&lt;p&gt;As escolas de samba X-9 Paulistana e Unidos de Lucas ficaram em sétimo e oitavo lugares. Elas foram rebaixadas para o Grupo de Acesso 2 em 2026.&lt;/p&gt;
+
+&lt;h2&gt;Grupo de Acesso 2&lt;/h2&gt;
+
+&lt;p&gt;As agremiações Pérola Negra e Camisa 12 conquistaram o título e o vice-campeonato do Grupo de Acesso 2, respectivamente, e desfilam no Grupo de Acesso 1 em 2026.&lt;/p&gt;
+
+&lt;p&gt;As escolas Brinco da Marquesa e Raízes do Samba foram a nona e a décima colocadas do Grupo de Acesso 2. Essas duas agremiações caem para o Grupo Especial de Bairros no próximo desfile.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 14:22:00 -0300</pubDate>
+ <dc:creator>Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633672 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/cultura">Cultura</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/desfile-das-campeas">Desfile das Campeãs</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/sao-paulo-0">São Paulo</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/tv-brasil-0">TV Brasil</category>
+  </item>
+  <item>
+    <title>Enredo sobre Exu-mulher dá título a escola do grupo de acesso de SP</title>
+    <link>https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/enredo-sobre-exu-mulher-da-titulo-escola-do-grupo-de-acesso-de-sp</link>
+    <imagem-destaque>https://imagens.ebc.com.br/qT63mSGWjFUnaRaxf5wzQjqsrBk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/08/53663703295_fe9024ccf8_o-1536x1068.jpg?itok=SNlhb2s-</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/enredo-sobre-exu-mulher-da-titulo-escola-do-grupo-de-acesso-de-sp&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;&quot;Eu sou da ralé…ôôô. Você me excluiu e rejeitou. Mas vou seguir a minha fé. Na luta e resistência da mulher”. Foi com o enredo &lt;em&gt;Exu-Mulher&lt;/em&gt; que a Pérola Negra venceu o Grupo de Acesso 2 do carnaval de São Paulo e voltará a entrar no Sambódromo do Anhembi neste sábado, às 20h45, no Desfile das Campeãs, que será &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/carnaval-de-sp-tv-brasil-exibe-desfile-das-campeas-com-exclusividade&quot; target=&quot;_blank&quot;&gt;exibido com exclusividade pela &lt;strong&gt;TV Brasil&lt;/strong&gt;&lt;/a&gt;.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633667&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633667&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;O tema da escola foi baseado no livro &lt;em&gt;Exu-Mulher e o matriarcado nagô: masculinização, demonização e tensões de gênero na formação dos candomblés&lt;/em&gt;, escrito pela jornalista, pesquisadora e especialista em cultura afro-brasileira e religiões de matrizes africanas Claudia Alexandre&lt;/strong&gt;. No ano passado, o livro, que é baseado em sua tese de doutorado, foi vencedor do &lt;a href=&quot;https://www.premiojabuti.com.br/jabuti/premiados-por-edicao/premiacao/?ano=24&amp;amp;eixo=561a81b4-e678-ee11-8179-002248de66c1&amp;amp;categoria=1b3d416c-dc9d-ee11-a569-0022483606e7&quot; target=&quot;_blank&quot;&gt;Prêmio Jabuti na categoria Ciências da Religião e Teologia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/academicos-de-niteroi-vence-serie-ouro-e-sobe-ao-grupo-especial-do-rio&quot;&gt;Acadêmicos de Niterói vence Série Ouro e sobe ao Grupo Especial do Rio.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/rosas-de-ouro-e-campea-do-carnaval-das-escolas-de-samba-de-sao-paulo&quot;&gt;Rosas de Ouro é campeã do carnaval das escolas de samba de São Paulo.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/beija-flor-conquista-o-15o-titulo-do-carnaval-do-rio-de-janeiro&quot;&gt;Beija-flor conquista o 15º título do carnaval do Rio de Janeiro.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;No livro, Claudia Alexandre discute como a representação de Exu, orixá cultuado nas religiões de matrizes africanas, sempre esteve associado ao seu lado masculino no Brasil.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Exu-Mulher, que eu destaco no livro, é essa parte retirada e ocultada da constituição de Exu. Dizer que ele é masculino ajuda a reforçar a ideia de ele ser o diabo-cristão. É o que os primeiros exploradores e missionários que chegam nessas regiões de África tentaram reforçar quando tomaram contato com as representações de Exu, onde havia figuras com o pênis proeminente ao lado de outra figura com seios exagerados e a vagina demarcada e desproporcionais”, disse ela, em entrevista à Agência Brasil.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;“As descrições que chegaram no ocidente era de que os negros faziam rituais promíscuos, degradantes e demoníacos. Inclusive, para reforçar que tinham encontrado o culto ao demônio, excluíram as descrições das figuras com anatomias femininas”, acrescentou.&lt;/p&gt;
+
+&lt;p&gt;Na realidade, explicou ela, Exu representava tanto o homem quanto a mulher, “apontando para a inseparabilidade das coisas e das pessoas”. E como elemento mais importante do sistema na concepção dos povos yourubá, destacou a pesquisadora, Exu é o possuidor dos princípios dinâmicos da vida. “Suas representações eram sempre por pares de estatuetas com anatomias masculina e feminina. Exu é a possibilidade das relações sem hierarquia de gênero”, descreveu.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Em muitas localidade da África Ocidental - como Nigéria, Benin, Togo e Gana – existem famílias inteiras de culto a Exu, onde ele é representado sempre em pares, o que representa o poder de movimento, procriação, fertilidade, fecundidade, além da sexualidade”, completou.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Esse processo de masculinização do orixá e sua consequente demonização foram as principais transformações que Exu sofreu na travessia atlântica entre a África e o Brasil, principalmente com a escravização dos povos negros. “A exclusão da representação feminina de Exu ocorre a partir da invasão patriarcal colonial na região de culto a orixás e voduns, na área ocidental, a partir do século 16.&lt;/p&gt;
+
+&lt;p&gt;Os grupos de exploradores, missionários e comerciantes de escravizados foram os responsáveis pelas primeiras descrições sobre o comportamento, organização e práticas rituais das comunidades. Ao se depararem com rituais em devoção ao elemento Exu, que sempre estava representado em pares – feminino e masculino – eles argumentam ser esse um culto ao demônio e, no esforço de justificar suas narrativas, inclusive de que os negros africanos eram corpos sem alma e deveriam ser salvos pelo batismo e pela escravização europeia, masculinizaram essa divindade e excluíram qualquer citação às figuras femininas”.&lt;/p&gt;
+
+&lt;p&gt;Essa demonização contribuiu para que, ao chegar ao Brasil, as narrativas hegemônicas sobre os orixás prevalecessem, e a face feminina de Exu fosse esquecida ou silenciada. “Por essa razão, até mesmo Exu, por muito tempo, causou tensão para o sistema religioso do candomblé. As figuras em pares acabaram não se popularizando nas religiões afro-brasileiras. As mulheres negras que lideraram o s primeiros terreiros silenciaram sobre a existência desse elemento, pois além de demonizado, se tornou demonizante”, afirmou a pesquisadora.&lt;/p&gt;
+
+&lt;h2&gt;Luta e resistência&lt;/h2&gt;
+
+&lt;p&gt;Neste dia em que celebramos o Dia Internacional da Mulher, Claudia Alexandre destaca não somente a memória sobre a face feminina de Exu, mas também a luta e resistência das mulheres negras do Brasil. “Não é à toa que o livro reverencia o Matriarcado nagô e fala sobre as lutas das mulheres negras desde a escravização no Brasil até a resistência pelo sagrado, que possibilitou a formação dos candomblés na Bahia, mas também foram importantes para a formação das escolas de samba no Rio de Janeiro”, disse ela.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“É importante reconhecer que essas mulheres de terreiros continuam resistindo e que as perseguições e opressões ainda são realidades cotidianas. O racismo religioso cresce e aponta um retrocesso, que tem atingido mais mulheres que comandam os terreiros por todo o Brasil. Exu-Mulher ser lida e conhecida também ajuda nessa luta porque ela é parte de cada uma dessas mulheres negras que lutam contra a discriminação e a invisibilização”, acrescentou.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Escola de samba&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Todo esse debate sobre a exclusão dos traços de feminilidade de Exu se transformou em samba-enredo da Pérola Negra e a tornou campeã do Grupo de Acesso 2&lt;/strong&gt;. O desfile da escola, assinado pelo carnavalesco Rodrigo Meiners, tratou sobre a força da transformação e a resistência das mulheres negras na manutenção da cultura afro-brasileira.&lt;/p&gt;
+
+&lt;p&gt;“Para mim, [o título] foi uma surpresa maravilhosa. Uma espécie de coroação à minha trajetória. Minha primeira grande reportagem no Carnaval foi a inauguração em 1991 do Sambódromo do Anhembi. Passei noites escrevendo, comentando e narrando os desfiles de São Paulo e, nem em sonho imaginei que um dia uma pesquisa minha fosse inspirar o enredo campeão de uma escola de samba, especialmente da Pérola Negra que precisava se superar e retornar ao Grupo de Acesso 1”, comentou a pesquisadora, que também é estudiosa sobre escolas de samba.&lt;/p&gt;
+
+&lt;p&gt;“O carnavalesco Rodrigo Meiners, que também estreou neste ano, foi muito cuidadoso. Entendeu o trabalho, me levou para uma palestra na comunidade e foi incrível na preparação da narrativa do desfile”, disse ela.&lt;/p&gt;
+
+&lt;p&gt;Além de inspirar o enredo, Claudia Alexandre também desfilou pela escola. “Fiquei muito emocionada em ver o pavilhão estampado Exu-Mulher e por ter desfilado em um carro alegórico que representava o tema da pesquisa”, afirmou.&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 13:51:00 -0300</pubDate>
+ <dc:creator>Elaine Patrícia Cruz - Repórter da Agência Brasil</dc:creator>
+ <guid isPermaLink="false">1633667 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/cultura">Cultura</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-2025">carnaval 2025</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/perola-negra">Pérola Negra</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/campeao">Campeão</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/sp-0">SP</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/enredo-exu-mulher">enredo Exú-Mulher</category>
+  </item>
+  <item>
+    <title>Mulheres ritmistas enfrentam preconceito como principal desafio</title>
+    <link>https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/mulheres-ritmistas-enfrentam-preconceito-como-principal-desafio</link>
+    <imagem-destaque>https://imagens.ebc.com.br/o6JBGsWDNuCJlXROoN-Pr9n9Waw=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/whatsapp_image_2024-02-16_at_15.03.51_1.jpeg?itok=LIXXM9DM</imagem-destaque>    <description>  &lt;p&gt;&lt;p style=&quot;text-align:center;&quot;&gt;&lt;a class=&quot;&quot; href=&quot;https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/mulheres-ritmistas-enfrentam-preconceito-como-principal-desafio&quot;&gt;
+                    &lt;img src=&quot;https://cdn.jsdelivr.net/gh/sergiosdlima/assets-ebc@1.0.0/abr/assets/images/logo-agenciabrasil.svg&quot; alt=&quot;Logo Agência Brasil&quot; style=&quot;height: 54px;&quot;&gt;
+				&lt;/a&gt;&lt;/p&gt;O Carnaval de 2025 no Rio de Janeiro se encerrou na última quarta-feira (5) com a &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/beija-flor-conquista-o-15o-titulo-do-carnaval-do-rio-de-janeiro&quot; target=&quot;_blank&quot;&gt;consagração da Beija-Flor de Nilópolis&lt;/a&gt; como grande campeã do Grupo Especial. Além da escola de samba da Baixada Fluminense, outras cinco agremiações participam neste sábado (8) do Desfile das Campeãs. À &lt;strong&gt;Agência Brasil&lt;/strong&gt;, ritmistas que retornam ao Sambódromo da Marquês de Sapucaí comentam sobre a participação feminina nas baterias das escolas de samba, espaço ainda predominantemente masculino.&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.png?id=1633664&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;img src=&quot;https://agenciabrasil.ebc.com.br/ebc.gif?id=1633664&amp;o=rss&quot; style=&quot;width:1px; height:1px; display:inline;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“A presença das mulheres na bateria ainda é um ato de resistência pelos desafios que passamos”, afirma Joyce Lacorte, em seu terceiro desfile pela Unidos do Viradouro.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;h3&gt;Notícias relacionadas:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/mulheres-lutaram-pela-familia-durante-e-depois-da-ditadura&quot;&gt;Como Eunice Paiva, brasileiras encararam dor e demora por direitos.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-03/ministerio-preve-inaugurar-novas-unidades-de-atendimento-mulher&quot;&gt;Ministério prevê inaugurar novas unidades de atendimento à mulher.&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;Neste ano, a escola de samba de Niterói, vencedora do carnaval anterior, ocupou a quarta posição no Grupo Especial com o &lt;a href=&quot;http:// https://agenciabrasil.ebc.com.br/geral/noticia/2025-02/viradouro-aposta-na-historia-de-malunguinho-para-tentar-bicampeonato&quot; target=&quot;_blank&quot;&gt;enredo “&lt;em&gt;Malunguinho: O Mensageiro de Três Mundos&lt;/em&gt;”&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Ritmista há 15 anos, a história da bibliotecária com o carnaval começou na Império Serrano, quando fez parte da escola de percussão da agremiação para aprender a tocar tamborim. Em 2011, Joyce participou de seu primeiro desfile na agremiação do bairro de Madureira, na zona norte, que &lt;a href=&quot;https://agenciabrasil.ebc.com.br/cultura/noticia/2025-03/academicos-de-niteroi-vence-serie-ouro-e-sobe-ao-grupo-especial-do-rio&quot; target=&quot;_blank&quot;&gt;atualmente disputa na Série Ouro&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para ela, o número de mulheres, frequentemente mais presentes em cargos como rainhas ou musas, tem aumentado nas baterias das escolas de samba, principalmente entre os naipes mais leves, como tamborim, chocalho e agogô. Entretanto, o acúmulo de funções, somado à falta de rede de apoio e ao preconceito velado, ainda dificulta a participação feminina.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Nossa capacidade ainda é posta em dúvida a todo momento, seja por comentários sutis ou por meros sorrisos de deboche”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;Desafios&lt;/h2&gt;
+
+&lt;p&gt;“As mulheres estão conquistando seu espaço com muita luta, muita vontade e muita resistência, porque não é fácil. No carnaval, assim como no mundo fora do carnaval, o protagonismo feminino encontra muitas barreiras. Essa conquista é lenta, mas tem acontecido”, afirma a professora de história e ritmista da Grande Rio, Dilma Marques.&lt;/p&gt;
+
+&lt;p&gt;Em 2019, a historiadora começou a aprender a tocar tamborim. Desde então, o sonho de Dilma se tornou fazer parte da bateria da Grande Rio, desejo que realizou em 2023, quando desfilou pela primeira vez na Escola de Samba de Duque de Caxias. “Estou numa bateria e numa ala que valoriza muito o trabalho das mulheres. Tenho muita sorte de estar numa bateria que enxerga as mulheres como ritmistas, nos valorizam e nos dão lugar de destaque”, compartilha.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“O que nos atrapalha”, continua Dilma, “é que vivemos numa sociedade machista onde mulheres no samba enfrentam jornada tripla. Temos o nosso emprego, nossa casa e filhos e a bateria. Dar conta de tudo é muito difícil. Conseguimos porque amamos o samba”. &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;À &lt;strong&gt;Agência Brasil&lt;/strong&gt;, a ritmista defende que ainda faltam “consciência, empatia e vontade de mudança” quanto à participação feminina nas baterias das escolas de samba. “Os homens precisam chegar junto na luta e rever muitos privilégios que têm. A cabeça dos homens mais jovens já é bastante diferente, porque nasceram num mundo onde esses preconceitos são questionados constantemente”, afirma. &lt;/p&gt;
+
+&lt;h2&gt;Movimento Mulheres no Ritmo&lt;/h2&gt;
+
+&lt;p&gt;Criado pela ritmista Carolina Messias dos Santos, mais conhecida como Carol Santos, o&lt;a href=&quot;http:// https://www.instagram.com/mulheresnoritmo/&quot; target=&quot;_blank&quot;&gt; coletivo Mulheres no Ritmo&lt;/a&gt; é responsável por registrar, por meio do audiovisual, o trabalho das mulheres em baterias de escolas de samba do Rio de Janeiro e de São Paulo, além de atuar na cobrança por equidade nas agremiações e questionar a ausência feminina em cargos de liderança.&lt;/p&gt;
+
+&lt;div class=&quot;dnd-widget-wrapper context-cheio_8colunas type-image&quot;&gt;&lt;div class=&quot;dnd-atom-rendered&quot;&gt;&lt;!-- scald=416731:cheio_8colunas --&gt;
+            &lt;img src=&quot;/sites/default/files/thumbnails/image/loading_v2.gif&quot; data-echo=&quot;https://imagens.ebc.com.br/xWUC2_nnoTEHkBt0EuRgyWgYyaw=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/whatsapp_image_2025-03-07_at_15.05.23-3.jpeg?itok=wWUHM-Qa&quot; alt=&quot;Rio de Janeiro (RJ) 03/03/2025 - Carolina Messias dos Santos, ritmista da Escola de Samba Mangueira. Foto: Carol Santos/Arquivo Pessoal&quot; title=&quot;Carol Santos/Arquivo Pessoal&quot;&gt;
+        &lt;noscript&gt;&lt;img src=&quot;https://imagens.ebc.com.br/xWUC2_nnoTEHkBt0EuRgyWgYyaw=/754x0/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/03/07/whatsapp_image_2025-03-07_at_15.05.23-3.jpeg?itok=wWUHM-Qa&quot; alt=&quot;Rio de Janeiro (RJ) 03/03/2025 - Carolina Messias dos Santos, ritmista da Escola de Samba Mangueira. Foto: Carol Santos/Arquivo Pessoal&quot; title=&quot;Carol Santos/Arquivo Pessoal&quot;&gt;&lt;/noscript&gt;
+    &lt;!-- END scald=416731 --&gt;&lt;/div&gt;&lt;div class=&quot;dnd-caption-wrapper&quot;&gt;
+&lt;div class=&quot;meta&quot;&gt;Carolina Messias dos Santos, ritmista da Escola de Samba Mangueira. Foto &lt;strong&gt;Carol Santos/Arquivo Pessoal&lt;/strong&gt;&lt;!--END copyright=416731--&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;“A presença feminina nas baterias tem crescido bastante e posso afirmar com convicção que a página Mulheres no Ritmo contribuiu muito para esse avanço&lt;/strong&gt;. Há quase nove anos, estamos na luta pela igualdade das mulheres nas baterias, dando voz, visibilidade, exaltando, evidenciando e incentivando mais mulheres a ingressarem nesse espaço”, diz Carol.&lt;/p&gt;
+
+&lt;p&gt;Nascida em São Paulo, onde começou a tocar surdo de segunda pela Torcida Independente, apoiando o São Paulo Futebol Clube, em 2011 a ritmista estreou no carnaval pela escola de samba Independente Tricolor, inicialmente no chocalho e depois nos surdos de segunda e terceira. Há oito anos no Rio de Janeiro, desde 2023, Carol desfila como parte da bateria “Tem que Respeitar Meu Tamborim”, da Mangueira.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Hoje, vemos mais mulheres tocando, ensinando e até comandando baterias. A presença feminina tem crescido não só nas baterias, mas também em cargos de direção, na parte musical e na organização das escolas. No entanto, essa evolução não aconteceu por acaso. Foi preciso que muitas mulheres enfrentassem barreiras para que outras pudessem chegar onde estão hoje”, afirma.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Como Joyce e Dilma, Carol cita “o preconceito, a resistência e a falta de oportunidades” como desafios enfrentados pelas mulheres ritmistas nas baterias das agremiações. “Muitas vezes, as mulheres precisam provar o tempo todo que são capazes. Mas o cenário tem mudado, e ver cada vez mais mulheres nas baterias me enche de esperança e orgulho. A luta ainda existe, mas estamos avançando”.&lt;/p&gt;
+
+&lt;p&gt;Atualmente, o movimento Mulheres no Ritmo conta com cerca de 20 ritmistas dos estados do Rio de Janeiro, São Paulo, Espírito Santo e Santa Catarina, realizando também a cobertura dos desfiles de carnaval nesses quatro estados. O principal objetivo do coletivo, de acordo com Carol, é “abrir caminhos e garantir que as próximas gerações tenham ainda mais espaço e reconhecimento dentro das escolas de samba”.&lt;/p&gt;
+
+&lt;p&gt;“Precisamos continuar ocupando esses espaços, pois temos direito a isso, seja no carnaval ou em qualquer outro setor da sociedade. &lt;strong&gt;Como diz o slogan do Mulheres no Ritmo: ‘Lugar de mulher é onde ela quiser’”, garante a ritmista.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*Estagiária sob supervisão de Mariana Tokarnia&lt;/em&gt;&lt;/p&gt;
+</description>
+     <pubDate>Sat, 08 Mar 2025 12:50:00 -0300</pubDate>
+ <dc:creator>Francielly Barbosa*</dc:creator>
+ <guid isPermaLink="false">1633664 at https://agenciabrasil.ebc.com.br</guid>
+ <category domain="https://agenciabrasil.ebc.com.br/direitos-humanos">Direitos Humanos</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/dia-internacional-da-mulher">dia internacional da mulher</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/carnaval-0">Carnaval</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/ritmistas">ritmistas</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/baterias">Baterias</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/escolas-de-samba">escolas de samba</category>
+ <category domain="https://agenciabrasil.ebc.com.br/tags/preconceito">preconceito</category>
+  </item>
+  </channel>
+</rss>
+Explicar"; // Substitua pelo link do feed RSS desejado
+            try {
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${url}`);
+                const data = await response.json();
+                
+                // Verifica se o feed foi carregado corretamente
+                if (!data.items) {
+                    document.getElementById("rss-feed").innerHTML = "Erro ao carregar notícias.";
+                    return;
+                }
+
+                // Monta a lista de notícias
+                let html = "<ul>";
+                data.items.slice(0, 5).forEach(item => {
+                    html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+                });
+                html += "</ul>";
+
+                // Exibe a lista dentro da div
+                document.getElementById("rss-feed").innerHTML = html;
+            } catch (error) {
+                console.error("Erro ao carregar o feed RSS:", error);
+                document.getElementById("rss-feed").innerHTML = "Não foi possível carregar as notícias.";
+            }
+        }
+
+        // Chama a função ao carregar a página
+        loadRSS();
+    </script>
+
 <!-- Guia Comercial - O melhores negócios da região -->
 
 <article>
@@ -209,6 +851,18 @@
 <!-- 🔴 FIM DO VÍDEO -->
 
 </article>
+
+<!-- Centro de Recreação Corujinha - Chamada Sensacionalista -->
+
+<article>
+    <h2><i class="fas fa-child"></i> Olá mamãe e papai! O Centro de Recreação Corujinha Mudou de Endereço! Você Não Pode Perder!</h2>
+    <p>O <strong>Centro de Recreação Corujinha</strong> está de endereço novo em Itu e agora conta com uma estrutura ainda mais moderna e espaços ampliados! Esse é o lugar perfeito para seu filho aprender, se divertir e crescer em um ambiente acolhedor. E o melhor: <strong>as matrículas estão abertas!</strong></p>
+    
+    <p>Saiba mais sobre o novo espaço e descubra as atividades incríveis que estão esperando seu filho. Não perca a oportunidade de fazer parte dessa transformação!</p>
+    
+    <a href="https://www.acontecenegocios.com.br/centro-recreacao-corujinha" target="_blank">Clique aqui e saiba mais sobre o novo Centro de Recreação Corujinha! Matrículas abertas!</a>
+</article>
+
 
     <!-- Vagas de Emprego na Região -->
 
@@ -374,5 +1028,11 @@
     <footer>
         <p>&copy; 2025 Acontece Negócios - Todos os direitos reservados.</p>
     </footer>
+
+<a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=5511991389974&text=Ol%C3%A1%20Guia%20Comercial%20Acontece%20Neg%C3%B3cios,%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20...." target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      Fale Conosco
+    </a>
+
 </body>
 </html>
