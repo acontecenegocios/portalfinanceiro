@@ -1,168 +1,198 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+    <!-- SEO Básico -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planejamento Financeiro | Portal de Finanças</title>
-    <meta name="description" content="Aprenda como organizar suas finanças pessoais e alcançar seus objetivos financeiros através de um bom planejamento. Dicas práticas e eficazes para melhorar sua vida financeira.">
+    <title>Portal de Finanças | Planejamento e Educação Financeira</title>
+    <meta name="description" content="Aprenda a organizar suas finanças, investir com segurança e alcançar seus objetivos com o Portal de Finanças. Dicas práticas e atualizadas para melhorar sua vida financeira.">
+    <meta name="keywords" content="finanças, planejamento financeiro, investimentos, economia pessoal, educação financeira, dicas financeiras">
+    <meta name="author" content="Portal de Finanças">
+
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Portal de Finanças | Dicas de Planejamento e Investimentos">
+    <meta property="og:description" content="Aprenda a organizar suas finanças e investir com segurança. Confira nossas dicas no Portal de Finanças!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.portaldefinancas.com">
+    <meta property="og:image" content="https://www.portaldefinancas.com/imagem-destaque.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portal de Finanças | Dicas de Planejamento e Investimentos">
+    <meta name="twitter:description" content="Dicas práticas de finanças pessoais, planejamento e investimentos para alcançar seus objetivos financeiros.">
+    <meta name="twitter:image" content="https://www.portaldefinancas.com/imagem-destaque.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
     <style>
-        body { 
-            background-color: white; 
-            color: #004d40; 
-            font-family: Arial, sans-serif; 
+        :root {
+            --primary-color: #00bfa5;
+            --secondary-color: #004d40;
+            --background-color: #ffffff;
+            --text-color: #004d40;
+            --highlight-color: #ffccbc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
             margin: 0;
             padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
         }
-        header { 
-            background-color: #00bfa5; 
-            color: white; 
-            padding: 15px; 
-            text-align: center; 
-        }
-        nav { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            background: #004d40; 
-            padding: 10px; 
-        }
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 1000px; 
-            margin: auto; 
-            padding: 20px; 
-        }
-        article { 
-            background: #e0f2f1; 
-            padding: 15px; 
-            margin: 15px 0; 
-            border-radius: 5px; 
-        }
-        .tip {
-            background-color: #ffccbc;
-            padding: 10px;
-            margin: 15px 0;
-            border-left: 5px solid red;
-            border-radius: 4px;
-        }
-        footer {
-            background-color: #004d40;
-            color: white;
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem;
             text-align: center;
-            padding: 10px;
-            margin-top: 30px;
         }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: var(--secondary-color);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .panel {
+            background: #e0f2f1;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        .panel h2 {
+            color: var(--secondary-color);
+        }
+
+        .tip {
+            background-color: var(--highlight-color);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-left: 4px solid red;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
         .back-button {
             display: inline-block;
-            background-color: #00bfa5;
-            color: white;
-            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
             text-decoration: none;
             border-radius: 5px;
-            text-align: center;
             margin-top: 20px;
+            transition: background-color 0.3s;
         }
+
         .back-button:hover {
-            background-color: #004d40;
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 0.75rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Portal de Finanças</h1>
+        <p>Educação Financeira para Todos</p>
     </header>
 
-    <nav>
+    <nav aria-label="Menu Principal">
         <a href="index.html">Início</a>
         <a href="dicas-de-financas.html">Dicas de Finanças</a>
         <a href="investimentos.html">Investimentos</a>
-        <a href="planejamento.html">Planejamento Financeiro</a>
+        <a href="planejamento.html" aria-current="page">Planejamento Financeiro</a>
         <a href="economia-pessoal.html">Economia Pessoal</a>
         <a href="politica-privacidade.html">Política de Privacidade</a>
     </nav>
 
-    <main>
-        <article id="dicas">
+    <main class="container">
+        <article class="panel">
             <header>
                 <h2>Planejamento Financeiro</h2>
-                <h1>Planejamento Financeiro: Como Organizar Suas Finanças para Alcançar Seus Objetivos</h1>
             </header>
 
             <section>
-                <p>O planejamento financeiro é essencial para quem deseja alcançar seus objetivos financeiros de maneira mais eficiente. Seja para quitar dívidas, comprar uma casa ou garantir a aposentadoria, um bom planejamento é a chave para o sucesso. Neste artigo, vamos apresentar dicas valiosas de como organizar suas finanças de maneira eficaz e alcançar seus objetivos a longo prazo.</p>
-            </section>
+                <h3>Como Organizar Suas Finanças para Alcançar Seus Objetivos</h3>
+                <p>O planejamento financeiro é essencial para alcançar seus objetivos de forma eficiente. Seja para quitar dívidas, comprar uma casa ou garantir a aposentadoria, um bom planejamento é a chave para o sucesso.</p>
 
-            <section>
-                <h2>1. Defina Seus Objetivos Financeiros</h2>
-                <p>O primeiro passo para um bom planejamento financeiro é definir claramente seus objetivos. Pergunte a si mesmo: o que você deseja alcançar financeiramente nos próximos meses ou anos? Pode ser a compra de um imóvel, a educação dos filhos, a aposentadoria ou até uma viagem dos sonhos. Definir esses objetivos ajuda a dar foco às suas finanças.</p>
+                <h4>1. Defina Seus Objetivos Financeiros</h4>
+                <p>O primeiro passo é definir claramente seus objetivos. Pergunte-se: o que você deseja alcançar financeiramente? Definir metas ajuda a dar foco às suas finanças.</p>
                 <div class="tip">
-                    <strong>Dica:</strong> Seja específico na definição dos seus objetivos. Quanto mais detalhado for seu objetivo, mais fácil será planejar os passos necessários para alcançá-lo.
+                    <strong>Dica:</strong> Seja específico. Exemplo: "Guardar R$ 10.000 em 12 meses".
                 </div>
-            </section>
 
-            <section>
-                <h2>2. Avalie Sua Situação Financeira Atual</h2>
-                <p>Antes de começar a planejar, é fundamental avaliar a sua situação financeira atual. Isso inclui entender suas fontes de renda, seus gastos mensais, suas dívidas e seus investimentos. Ao fazer uma análise clara do seu estado financeiro, você terá uma visão realista de onde pode melhorar e onde precisa cortar gastos.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Faça um levantamento completo de sua renda, despesas fixas e variáveis. Isso vai te ajudar a identificar onde está gastando mais do que deveria e onde pode cortar gastos.
-                </div>
-            </section>
+                <h4>2. Avalie Sua Situação Atual</h4>
+                <p>Faça um diagnóstico financeiro: analise renda, despesas, dívidas e investimentos. Isso ajuda a visualizar onde melhorar.</p>
 
-            <section>
-                <h2>3. Crie um Orçamento Mensal</h2>
-                <p>Com base na sua avaliação financeira, é hora de criar um orçamento mensal. Um orçamento é uma ferramenta poderosa para controlar os gastos e garantir que você está alocando recursos de maneira eficiente. A chave é dividir seu orçamento em categorias como moradia, alimentação, transporte, lazer e, claro, investimentos e poupança.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Utilize aplicativos de controle financeiro para te ajudar a monitorar seus gastos de forma fácil e prática. Isso facilita a identificação de possíveis excessos no seu orçamento.
-                </div>
-            </section>
+                <h4>3. Crie um Orçamento Mensal</h4>
+                <p>Organize seus gastos em categorias: moradia, alimentação, transporte, lazer e poupança.</p>
 
-            <section>
-                <h2>4. Elimine Dívidas e Crie uma Reserva de Emergência</h2>
-                <p>Antes de pensar em investimentos, é essencial eliminar dívidas de alto custo, como as do cartão de crédito e cheque especial. Essas dívidas podem consumir sua renda de forma rápida e impedir que você consiga avançar em outros objetivos financeiros. Além disso, criar uma reserva de emergência é fundamental para garantir que você estará preparado para imprevistos.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Fique atento às taxas de juros das suas dívidas. Comece pagando as que possuem maior juros, como o cartão de crédito. Uma vez sem dívidas, crie uma reserva de emergência de pelo menos 3 a 6 meses de despesas.
-                </div>
-            </section>
+                <h4>4. Elimine Dívidas e Faça uma Reserva de Emergência</h4>
+                <p>Pague dívidas de juros altos antes de investir. Crie uma reserva de 3 a 6 meses de despesas.</p>
 
-            <section>
-                <h2>5. Comece a Investir</h2>
-                <p>Uma vez que você tenha um orçamento equilibrado e uma reserva de emergência, é hora de começar a investir. Os investimentos são a chave para multiplicar seu patrimônio e alcançar metas financeiras mais ambiciosas, como a aposentadoria ou a compra de um imóvel. Existem diversas opções, desde a renda fixa, que é mais segura, até ações e fundos imobiliários, que apresentam maior risco e retorno.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Invista de acordo com seu perfil de risco. Se você é conservador, comece com investimentos mais seguros, como Tesouro Direto ou CDBs. Se for mais arrojado, pode investir em ações e fundos imobiliários.
-                </div>
-            </section>
+                <h4>5. Invista Conforme Seu Perfil</h4>
+                <p>Depois de equilibrar as contas, escolha investimentos adequados ao seu perfil: conservador, moderado ou arrojado.</p>
 
-            <section>
-                <h2>6. Monitore Seu Planejamento e Faça Ajustes</h2>
-                <p>Um bom planejamento financeiro não é estático, ele deve ser monitorado e ajustado ao longo do tempo. Acompanhe seus resultados periodicamente e faça ajustes sempre que necessário. Se algum objetivo mudar ou se você atingir suas metas antes do esperado, reavalie seu planejamento e coloque novas metas.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Reserve um tempo a cada 6 meses para revisar seu planejamento financeiro. Isso ajuda a manter suas finanças sob controle e ajustar seus objetivos conforme as mudanças na sua vida.
-                </div>
-            </section>
+                <h4>6. Monitore e Ajuste</h4>
+                <p>Revise seu planejamento a cada 6 meses para corrigir rotas e definir novos objetivos.</p>
 
-            <section>
-                <h2>7. Busque Educação Financeira Continuamente</h2>
-                <p>A educação financeira é um processo contínuo. Sempre há algo novo para aprender sobre o mercado financeiro, investimentos e como otimizar suas finanças. Buscar conhecimento vai te ajudar a tomar decisões mais acertadas e garantir que você esteja sempre no caminho certo.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Leia livros sobre finanças, siga blogs e podcasts especializados, e considere fazer cursos de educação financeira. Quanto mais você aprender, mais preparado estará para tomar boas decisões financeiras.
-                </div>
-            </section>
+                <h4>7. Busque Educação Financeira</h4>
+                <p>Invista em conhecimento! Leia livros, acompanhe blogs e podcasts sobre finanças.</p>
 
-            <section>
-                <h3>Conclusão</h3>
-                <p>O planejamento financeiro é a base para alcançar a estabilidade financeira e realizar seus sonhos. Ao seguir essas dicas, você estará no caminho certo para construir uma vida financeira saudável e alcançar suas metas. Lembre-se de que um bom planejamento requer disciplina, paciência e constância, mas os resultados a longo prazo valerão a pena.</p>
-                <p>Agora, é hora de colocar o seu planejamento financeiro em prática!</p>
-            </section>
+                <footer>
+                    <p><strong>Conclusão:</strong> O planejamento financeiro proporciona segurança e liberdade para realizar seus sonhos. Comece hoje!</p>
+                </footer>
 
-            <!-- Botão Voltar ao Início -->
-            <a href="index.html" class="back-button">Voltar ao Início</a>
+                <a href="index.html" class="back-button">Voltar ao Início</a>
+            </section>
         </article>
     </main>
 
