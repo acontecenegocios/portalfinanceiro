@@ -1,87 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Finanças</title>
-    <style>
-        body { 
-            background-color: white; 
-            color: #004d40; 
-            font-family: Arial, sans-serif; 
-            margin: 0;
-            padding: 0;
-        }
-        header { 
-            background-color: #00bfa5; 
-            color: white; 
-            padding: 15px; 
-            text-align: center; 
-        }
-        nav { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            background: #004d40; 
-            padding: 10px; 
-        }
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-        .container { 
-            max-width: 1000px; 
-            margin: auto; 
-            padding: 20px; 
-        }
-        .panel { 
-            background: #e0f2f1; 
-            padding: 15px; 
-            margin: 15px 0; 
-            border-radius: 5px; 
-        }
-        .news { 
-            background: #ffccbc; 
-            padding: 10px; 
-            margin: 15px 0; 
-            border-left: 5px solid red; 
-        }
-        footer {
-            background-color: #004d40;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 30px;
-        }
- .back-button {
-            display: inline-block;
-            background-color: #00bfa5;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .back-button:hover {
-            background-color: #004d40;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Financeiro Acontece Negócios</title>
 
-    </style>
+  <!-- SEO Tags Essenciais -->
+  <meta name="description" content="Dicas de investimentos e finanças pessoais para você maximizar seus ganhos e alcançar sua liberdade financeira." />
+  <meta name="keywords" content="finanças, investimentos, planejamento financeiro, economia pessoal, dicas de finanças" />
+  <meta name="author" content="Portal de Finanças" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph para Redes Sociais -->
+  <meta property="og:title" content="Portal de Finanças - Dicas e Estratégias para Investir Melhor" />
+  <meta property="og:description" content="Descubra como investir melhor com as dicas do Portal de Finanças. Informações práticas para maximizar seus rendimentos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.seusite.com.br" />
+  <meta property="og:image" content="https://www.seusite.com.br/imagem-capa.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    :root {
+      --primary-color: #00bfa5;
+      --dark-color: #004d40;
+      --light-color: #e0f2f1;
+      --highlight-color: #ffccbc;
+      --text-color: #004d40;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      background-color: var(--dark-color);
+      padding: 10px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .panel {
+      background-color: var(--light-color);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .news {
+      background-color: var(--highlight-color);
+      padding: 15px;
+      margin: 20px 0;
+      border-left: 5px solid red;
+    }
+
+    footer {
+      background-color: var(--dark-color);
+      color: var(--white);
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: var(--dark-color);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+
+      .back-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Portal de Finanças</h1>
-    </header>
-    <nav>
-	<a href="index.html">Inicio</a>
-        <a href="dicas-de-financas.html">Dicas de Finanças</a>
-        <a href="investimentos.html">Investimentos</a>
-        <a href="planejamento.html">Planejamento Financeiro</a>
-        <a href="economia-pessoal.html">Economia Pessoal</a>
-	<a href="politica-privacidade.html">Política de Privacidade</a>
-    </nav>
+  <header>
+    <h1>Portal Financeiro Acontece Negócios</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="dicas-de-financas.html">Dicas de Finanças</a>
+    <a href="investimentos.html">Investimentos</a>
+    <a href="planejamento.html">Planejamento Financeiro</a>
+    <a href="economia-pessoal.html">Economia Pessoal</a>
+    <a href="politica-privacidade.html">Política de Privacidade</a>
+  </nav>
     <div class="container">
         <div id="dicas" class="panel">
             <h2>Investimento</h2>
