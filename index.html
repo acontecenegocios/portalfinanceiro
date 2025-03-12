@@ -1,124 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <!-- SEO Básico -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Finanças | Planejamento e Educação Financeira</title>
-    <meta name="description" content="Aprenda a organizar suas finanças, investir com segurança e alcançar seus objetivos com o Portal de Finanças. Dicas práticas e atualizadas para melhorar sua vida financeira.">
-    <meta name="keywords" content="finanças, planejamento financeiro, investimentos, economia pessoal, educação financeira, dicas financeiras">
-    <meta name="author" content="Portal de Finanças">
+    
+    <!-- SEO Tags -->
+    <title>Portal Financeiro Acontece Negócios | Dicas de Finanças e Investimentos</title>
+    <meta name="description" content="Descubra dicas de finanças pessoais, investimentos rentáveis e planejamento financeiro no Portal Acontece Negócios. Aprenda a multiplicar seu patrimônio!">
+    <meta name="keywords" content="finanças, investimentos, economia pessoal, planejamento financeiro, educação financeira, dicas de finanças, renda extra">
+    <meta name="author" content="Portal Acontece Negócios">
 
-    <!-- Open Graph para redes sociais -->
-    <meta property="og:title" content="Portal de Finanças | Dicas de Planejamento e Investimentos">
-    <meta property="og:description" content="Aprenda a organizar suas finanças e investir com segurança. Confira nossas dicas no Portal de Finanças!">
+    <!-- Open Graph (para redes sociais) -->
+    <meta property="og:title" content="Portal Financeiro Acontece Negócios">
+    <meta property="og:description" content="Transforme sua vida financeira com dicas práticas de investimento e planejamento!">
+    <meta property="og:image" content="https://www.seusite.com.br/imagem-capa.jpg">
+    <meta property="og:url" content="https://www.seusite.com.br">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.portaldefinancas.com">
-    <meta property="og:image" content="https://www.portaldefinancas.com/imagem-destaque.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portal de Finanças | Dicas de Planejamento e Investimentos">
-    <meta name="twitter:description" content="Dicas práticas de finanças pessoais, planejamento e investimentos para alcançar seus objetivos financeiros.">
-    <meta name="twitter:image" content="https://www.portaldefinancas.com/imagem-destaque.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- CSS -->
     <style>
-        :root {
-            --primary-color: #00bfa5;
-            --secondary-color: #004d40;
-            --background-color: #ffffff;
-            --text-color: #004d40;
-            --highlight-color: #ffccbc;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
+            background-color: white;
+            color: #004d40;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
         }
-
         header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 1rem;
+            background-color: #00bfa5;
+            color: white;
+            padding: 15px;
             text-align: center;
         }
-
         nav {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            background-color: var(--secondary-color);
+            justify-content: center;
+            gap: 20px;
+            background: #004d40;
+            padding: 10px;
         }
-
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            padding: 1rem;
             font-weight: bold;
-            transition: background-color 0.3s;
         }
-
         nav a:hover {
-            background-color: var(--primary-color);
+            text-decoration: underline;
         }
-
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
         }
-
         .panel {
             background: #e0f2f1;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-        }
-
-        .panel h2 {
-            color: var(--secondary-color);
-        }
-
-        .tip {
-            background-color: var(--highlight-color);
-            padding: 1rem;
-            margin-top: 1rem;
-            border-left: 4px solid red;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 5px;
         }
-
+        .news {
+            background: #ffccbc;
+            padding: 10px;
+            margin: 15px 0;
+            border-left: 5px solid red;
+        }
         footer {
-            background-color: var(--secondary-color);
-            color: #fff;
+            background-color: #004d40;
+            color: white;
             text-align: center;
-            padding: 1rem;
-        }
-
-        .back-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .back-button:hover {
-            background-color: var(--secondary-color);
+            padding: 10px;
+            margin-top: 30px;
         }
 
         /* Responsividade */
@@ -126,78 +80,71 @@
             nav {
                 flex-direction: column;
             }
-
-            nav a {
-                padding: 0.75rem;
-            }
-
-            .container {
-                padding: 1rem;
-            }
         }
     </style>
 </head>
-
 <body>
+
     <header>
-        <h1>Portal de Finanças</h1>
-        <p>Educação Financeira para Todos</p>
+        <h1>Portal Financeiro Acontece Negócios</h1>
+        <p>Sua fonte de informações sobre finanças, investimentos e economia pessoal.</p>
     </header>
 
-    <nav aria-label="Menu Principal">
+    <nav>
         <a href="index.html">Início</a>
         <a href="dicas-de-financas.html">Dicas de Finanças</a>
         <a href="investimentos.html">Investimentos</a>
-        <a href="planejamento.html" aria-current="page">Planejamento Financeiro</a>
+        <a href="planejamento.html">Planejamento Financeiro</a>
         <a href="economia-pessoal.html">Economia Pessoal</a>
         <a href="politica-privacidade.html">Política de Privacidade</a>
     </nav>
 
     <main class="container">
-        <article class="panel">
-            <header>
-                <h2>Planejamento Financeiro</h2>
-            </header>
+        <section id="dicas" class="panel">
+            <h2>Dicas de Finanças Pessoais</h2>
+            <p>Descubra estratégias inteligentes para economizar dinheiro, evitar dívidas e melhorar sua saúde financeira. 
+            <a href="dicas-de-financas.html" target="_blank">Clique aqui e saiba mais!</a></p>
+        </section>
 
-            <section>
-                <h3>Como Organizar Suas Finanças para Alcançar Seus Objetivos</h3>
-                <p>O planejamento financeiro é essencial para alcançar seus objetivos de forma eficiente. Seja para quitar dívidas, comprar uma casa ou garantir a aposentadoria, um bom planejamento é a chave para o sucesso.</p>
+        <section id="investimentos" class="panel">
+            <h2>Melhores Investimentos para 2025</h2>
+            <p>Aprenda como multiplicar seu patrimônio com investimentos seguros e rentáveis, desde renda fixa até o mercado de ações. 
+            <a href="investimentos.html" target="_blank">Clique aqui e saiba mais!</a></p>
+        </section>
 
-                <h4>1. Defina Seus Objetivos Financeiros</h4>
-                <p>O primeiro passo é definir claramente seus objetivos. Pergunte-se: o que você deseja alcançar financeiramente? Definir metas ajuda a dar foco às suas finanças.</p>
-                <div class="tip">
-                    <strong>Dica:</strong> Seja específico. Exemplo: "Guardar R$ 10.000 em 12 meses".
-                </div>
+        <section id="planejamento" class="panel">
+            <h2>Planejamento Financeiro Eficiente</h2>
+            <p>Organize suas finanças para alcançar metas de curto, médio e longo prazo com um planejamento financeiro eficaz.
+            <a href="planejamento.html" target="_blank">Clique aqui e saiba mais!</a></p>
+        </section>
 
-                <h4>2. Avalie Sua Situação Atual</h4>
-                <p>Faça um diagnóstico financeiro: analise renda, despesas, dívidas e investimentos. Isso ajuda a visualizar onde melhorar.</p>
+        <section id="economia" class="panel">
+            <h2>Como Melhorar sua Economia Pessoal</h2>
+            <p>Otimize seu orçamento e faça escolhas inteligentes para manter um equilíbrio financeiro sustentável.
+            <a href="economia-pessoal.html" target="_blank">Clique aqui e saiba mais!</a></p>
+        </section>
 
-                <h4>3. Crie um Orçamento Mensal</h4>
-                <p>Organize seus gastos em categorias: moradia, alimentação, transporte, lazer e poupança.</p>
+        <h2>Últimas Notícias em Finanças</h2>
 
-                <h4>4. Elimine Dívidas e Faça uma Reserva de Emergência</h4>
-                <p>Pague dívidas de juros altos antes de investir. Crie uma reserva de 3 a 6 meses de despesas.</p>
+        <article class="news">
+            <h3>🚨 Crise Financeira Global à Vista? O Que Você Precisa Saber</h3>
+            <p>Especialistas alertam para uma possível recessão! Saiba como proteger seu dinheiro antes que seja tarde demais. Em breve aqui...</p>
+        </article>
 
-                <h4>5. Invista Conforme Seu Perfil</h4>
-                <p>Depois de equilibrar as contas, escolha investimentos adequados ao seu perfil: conservador, moderado ou arrojado.</p>
+        <article class="news">
+            <h3>💰 Bilionários Revelam Segredos Para Enriquecer Rapidamente</h3>
+            <p>Os 5 passos que magnatas seguem para acumular riquezas. Será que você está no caminho certo? Em breve aqui...</p>
+        </article>
 
-                <h4>6. Monitore e Ajuste</h4>
-                <p>Revise seu planejamento a cada 6 meses para corrigir rotas e definir novos objetivos.</p>
-
-                <h4>7. Busque Educação Financeira</h4>
-                <p>Invista em conhecimento! Leia livros, acompanhe blogs e podcasts sobre finanças.</p>
-
-                <footer>
-                    <p><strong>Conclusão:</strong> O planejamento financeiro proporciona segurança e liberdade para realizar seus sonhos. Comece hoje!</p>
-                </footer>
-
-                <a href="index.html" class="back-button">Voltar ao Início</a>
-            </section>
+        <article class="news">
+            <h3>🔥 Brasil Perdendo Poder de Compra! O Que Isso Significa Para Você?</h3>
+            <p>Inflação em alta e salário estagnado. Descubra como isso afeta sua vida e o que fazer para sair dessa situação. Em breve aqui...</p>
         </article>
     </main>
 
     <footer>
-        <p>&copy; 2025 Portal de Finanças. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Portal de Finanças Acontece Negócios. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
